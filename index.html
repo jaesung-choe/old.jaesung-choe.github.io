@@ -50,50 +50,48 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-<tr onmouseout="garfield_stop()" onmouseover="garfield_start()">
+<tr onmouseout="regsdf_stop()" onmouseover="regsdf_start()">
   <td style="padding:20px;width:30%;vertical-align:middle">
     <!-- IMAGES -->
     <div class="one">
-      <div class="two" id='garfield_under' >
-        <img src="images/garfield_under.jpg" width=110%/>
+      <div class="two" id='regsdf_under' >
+        <img src="images/regsdf_under.jpg" width=110%/>
       </div>
-      <video  width=115% height=100% muted autoplay loop id="garfield_splash">
-        <source src="images/garfield_splash.mp4" type="video/mp4">
+      <video  width=115% height=100% muted autoplay loop id="regsdf_splash">
+        <source src="images/regsdf_splash.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
     <!-- SCRIPT FOR HOVERING -->
     <script type="text/javascript">
-      function garfield_start() {
-        document.getElementById('garfield_splash').style.opacity = "0";
-        document.getElementById('garfield_under').style.opacity = "1";
+      function regsdf_start() {
+        document.getElementById('regsdf_splash').style.opacity = "0";
+        document.getElementById('regsdf_under').style.opacity = "1";
       }
 
-      function garfield_stop() {
-        document.getElementById('garfield_splash').style.opacity = "1";
-        document.getElementById('garfield_under').style.opacity = "0";
+      function regsdf_stop() {
+        document.getElementById('regsdf_splash').style.opacity = "1";
+        document.getElementById('regsdf_under').style.opacity = "0";
       }
-      garfield_stop()
+      regsdf_stop()
     </script>
   </td>
   <td style="padding:20px;width:70%;vertical-align:middle">
     <!-- TITLE -->
-    <a href="https://www.garfield.studio/"><papertitle>GARField: Group Anything with Radiance Fields
+    <papertitle>Spacetime Surface Regularization for Neural Dynamic Scene Reconstruction
     </papertitle></a>
     <br>
     <!-- AUTHORS -->
-    <b>Jaesung Choe*</b>, Mingxuan Wu*, Justin Ker*, Ken Goldberg, Matthew Tancik, Angjoo Kanazawa
-    <br>
-    *Equal contribution
+    <b>Jaesung Choe</b>, Christopher Choy, Jaesik Park, In So Kweon, Anima Anandkumar
     <br>
     <!-- CONFERENCE -->
-    <em>arXiv</em> 2023 
+    <em>ICCV</em> 2023 
     <!-- LINKS -->
     <br>
-    <a href="https://arxiv.org/abs/2401.09419">arXiv</a> / <a href="https://www.garfield.studio/">Website</a>
+    <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Choe_Spacetime_Surface_Regularization_for_Neural_Dynamic_Scene_Reconstruction_ICCV_2023_paper.pdf">Paper</a>
     <p></p>
     <!-- SUMMARY -->
-    Hierarchical grouping in 3D by training a scale-conditioned affinity field from multi-level masks
+    Propose spacetime surface regularization for 4D surface reconstruction
   </td>
 </tr>
 				
