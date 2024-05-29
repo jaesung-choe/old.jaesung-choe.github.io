@@ -93,53 +93,54 @@
 </tr>
 				
 <!-- Works listed here -->      
-<!-- Lerf-togo -->
-<tr onmouseout="lerftogo_stop()" onmouseover="lerftogo_start()">
+<!-- PointMIxer -->
+<tr onmouseout="pointmixer_stop()" onmouseover="pointmixer_start()">
   <td style="padding:20px;width:25%;vertical-align:middle">
     <!-- IMAGES -->
     <div class="one">
-      <div class="two" id='lerftogo_under'>
-        <img src="images/lerftogo_under.jpg" width=100%/>
+      <div class="two" id='pointmixer_under'>
+        <img src="images/pointmixer_under.jpeg" width=100%/>
       </div>
-      <video  width=115% height=100% muted autoplay loop id="lerftogo_splash">
-        <source src="images/lerftogo_splash.mp4" type="video/mp4">
+      <video  width=115% height=100% muted autoplay loop id="pointmixer_splash">
+        <source src="images/pointmixer_splash.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
     <!-- SCRIPT FOR HOVERING -->
     <script type="text/javascript">
-      function lerftogo_start() {
-        document.getElementById('lerftogo_splash').style.opacity = "0";
-        document.getElementById('lerftogo_under').style.opacity = "1";
+      function pointmixer_start() {
+        document.getElementById('pointmixer_splash').style.opacity = "0";
+        document.getElementById('pointmixer_under').style.opacity = "1";
       }
 
-      function lerftogo_stop() {
-        document.getElementById('lerftogo_splash').style.opacity = "1";
-        document.getElementById('lerftogo_under').style.opacity = "0";
+      function pointmixer_stop() {
+        document.getElementById('pointmixer_splash').style.opacity = "1";
+        document.getElementById('pointmixer_under').style.opacity = "0";
       }
-      lerftogo_stop()
+      pointmixer_stop()
     </script>
   </td>
   <td style="padding:20px;width:75%;vertical-align:middle">
     <!-- TITLE -->
-    <a href="https://lerftogo.github.io"><papertitle>LERF-TOGO: Language Embedded Radiance Fields for Zero-Shot Task-Oriented Grasping
+    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870611.pdf"><papertitle>PointMixer: MLP-Mixer for Point Cloud Understanding
     </papertitle></a>
     <br>
     <!-- AUTHORS -->
-    Adam Rashid*, Satvik Sharma*, <b>Chung Min Kim</b>, Justin Kerr, Lawrence Yunliang Chen, Angjoo Kanazawa, Ken Goldberg
+    <b>Jaesung Choe*</b>, Chunghyun Park*, Francois Rameau, Jaesik Park, In So Kweon
     <br>
     *Equal contribution
     <br>
     <!-- CONFERENCE -->
-    <em>CoRL</em> 2023 <b>Oral, Best Paper Finalist</b>
+    <em>ECCV</em> 2022
     <!-- LINKS -->
     <br>
-    <a href="https://arxiv.org/abs/2309.07970">arXiv</a> / <a href="https://lerftogo.github.io/">Website</a>
+    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870611.pdf">Paper</a> / <a href="https://github.com/LifeBeyondExpectations/ECCV22-PointMixer">Code</a> / <a href="https://www.dropbox.com/s/im5r5jc2kdej2hb/ECCV22_Poster.pdf?dl=0">Poster</a> / <a href="https://www.youtube.com/watch?v=96jY3DEjxxo&feature=youtu.be&themeRefresh=1">Video</a>
     <p></p>
     <!-- SUMMARY -->
-    LERF's multi-scale semantics enables 0-shot language-conditioned part grasping for a wide variety of objects.
+    Design a new MLP-only architecture for 3D points.
   </td>
 </tr>
+
 <!-- LERF -->
 <tr onmouseout="lerf_stop()" onmouseover="lerf_start()">
   <td style="padding:20px;width:25%;vertical-align:middle">
