@@ -141,50 +141,47 @@
   </td>
 </tr>
 
-<!-- LERF -->
-<tr onmouseout="lerf_stop()" onmouseover="lerf_start()">
+<!-- depthfusion -->
+<tr onmouseout="depthfusion_stop()" onmouseover="depthfusion_start()">
   <td style="padding:20px;width:25%;vertical-align:middle">
     <!-- IMAGES -->
     <div class="one">
-      <div class="two" id="lerf_under" style="opacity: 0;">
-        <img src="images/lerf_under.svg" width="180">
+      <div class="two" id="depthfusion_under" style="opacity: 0;">
+        <img src="images/depthfusion_under.svg" width="180">
       </div>
-      <video width="115%" height="100%" muted="" autoplay="" loop="" id="lerf_splash" style="opacity: 1;">
-        <source src="images/lerf_splash.mp4" type="video/mp4">
+      <video width="115%" height="100%" muted="" autoplay="" loop="" id="depthfusion_splash" style="opacity: 1;">
+        <source src="images/depthfusion_splash.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
     <!-- SCRIPT FOR HOVERING -->
     <script type="text/javascript">
-      function lerf_start() {
-        document.getElementById('lerf_splash').style.opacity = "0";
-        document.getElementById('lerf_under').style.opacity = "1";
+      function depthfusion_start() {
+        document.getElementById('depthfusion_splash').style.opacity = "0";
+        document.getElementById('depthfusion_under').style.opacity = "1";
       }
 
-      function lerf_stop() {
-        document.getElementById('lerf_splash').style.opacity = "1";
-        document.getElementById('lerf_under').style.opacity = "0";
+      function depthfusion_stop() {
+        document.getElementById('depthfusion_splash').style.opacity = "1";
+        document.getElementById('depthfusion_under').style.opacity = "0";
       }
-      lerf_stop()
+      depthfusion_stop()
     </script>
   </td>
   <td style="padding:20px;width:75%;vertical-align:middle">
     <!-- TITLE -->
-    <a href="https://lerf.io"><papertitle>LERF: Language Embedded Radiance Fields</papertitle></a>
+    <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Choe_VolumeFusion_Deep_Depth_Fusion_for_3D_Scene_Reconstruction_ICCV_2021_paper.html"><papertitle>VolumeFusion: Deep Depth Fusion for 3D Scene Reconstruction</papertitle></a>
     <br>
     <!-- AUTHORS -->
-    Justin Kerr*, <b>Chung Min Kim*</b>, Ken Goldberg, Angjoo Kanazawa, Matthew Tancik
-    <br>
-    *Equal contribution
-    <!-- <br> -->
+    <b>Jaesung Choe</b>, Sunghoon Im, Francois Rameau, Minjun Kang, In So Kweon
     <!-- CONFERENCE -->
-    <em>ICCV</em> 2023 <b>Oral</b>
+    <em>ICCV</em> 2021 <b>Oral</b>
     <!-- LINKS -->
     <br>
-    <a href="https://arxiv.org/abs/2303.09553">arXiv</a> / <a href="https://lerf.io">Website</a>
+    <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Choe_VolumeFusion_Deep_Depth_Fusion_for_3D_Scene_Reconstruction_ICCV_2021_paper.html">Paper</a> / <a href="https://youtu.be/NMB9_dch4BI">Video</a> / <a href="https://www.dropbox.com/s/x61mzk8go18rcmm/Video_VolumeFusion.pdf?dl=0">Slide</a>
     <p></p>
     <!-- SUMMARY -->
-    Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D
+    Deep learning based Depth Fusion algorithm for Indoor Scene Reconstruction.
   </td>
 </tr>
 
