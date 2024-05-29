@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <title>Chung Min Kim</title>
+  <title>Jaesung Choe</title>
   
-  <meta name="author" content="Chung Min Kim">
+  <meta name="author" content="Jaesung Choe">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -19,20 +19,19 @@
           <tr style="padding:0px">
             <td style="padding:2.5%;width:63%;vertical-align:middle">
               <p style="text-align:center">
-                <name>Chung Min Kim</name>
+                <name>Jaesung Choe</name>
               </p>
               <p>
-                I am a second-year PhD student in at <a href="https://www.berkeley.edu/">UC Berkeley</a>, where I am advised by <a href="https://goldberg.berkeley.edu/">Ken Goldberg</a> and <a href="https://people.eecs.berkeley.edu/~kanazawa/">Angjoo Kanazawa</a>. I received my dual B.S. degree in EECS (Electrical Engineering and Computer Science) and Mechanical Engineering from <a href="https://www.berkeley.edu/">UC Berkeley</a> in 2021.
-                I am currently funded by the <a href="http://www.nsfgrfp.org/">NSF GRFP</a>. 🐻
+                Hi, I am a research scientist at <a href="https://research.nvidia.com/labs/twn/">NVIDIA Research Taiwan</a>. My main research interest is Multimodal Large Language Model for 3D data.
               </p>
               <p>
-                My research interests include computer vision and robotics. I'm interested in connecting large vision-language models with 3D representations (e.g., <a href="https://www.matthewtancik.com/nerf">NeRFs</a>). My goal is to apply these models to robots in the real world, which is challenging due to lack of structure and large variability in the real world. 🦾
+                I received my PhD from <a href="https://www.kaist.ac.kr/en/">KAIST</a> under the supervision of <a href="https://rcv.kaist.ac.kr/">In So Kweon</a>. After the PhD, I worked as a Postdoc at <a href="https://international.postech.ac.kr/user/index.do">POSTECH</a> under <a href="https://jaesik.info/">Jaesik Park</a>. I was a research intern at <a href="https://www.nvidia.com/en-us/research/">NVIDIA Research AI Algorithm</a> with <a href="https://chrischoy.github.io/">Christopher Choy</a>, <a href="http://tensorlab.cms.caltech.edu/users/anima/">Anima Anandkumar</a>, and at <a href="https://about.meta.com/realitylabs/">Meta Reality Lab</a> with <a href="https://shuochsu.github.io/">Shuochen Su</a>.
               </p>
               <p style="text-align:center">
-                <a href="mailto:chungmin99@berkeley.edu">Email</a> &nbsp/&nbsp
-                <a href="https://scholar.google.com/citations?hl=en&user=ODr5lMgAAAAJ">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://twitter.com/ChungMinKim">Twitter</a> &nbsp/&nbsp
-                <a href="https://github.com/chungmin99/">Github</a>
+                <a href="mailto:jchoe@nvidia.com">Email</a> &nbsp/&nbsp
+                <a href="https://scholar.google.com/citations?user=dQ7NO0IAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
+                <a href="https://drive.google.com/file/d/12s0tRtbeDtwkqyzuVpRwsoIRXiGBqpz_/view?usp=sharing">CV</a> &nbsp/&nbsp
+                <a href="https://www.linkedin.com/in/jaesung-choe-531611267/">LinkedIn</a>
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
@@ -40,284 +39,285 @@
             </td>
           </tr>
         </tbody></table>
-        <!-- Research overview if applicable -->
+	<!-- Research overview if applicable -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research</heading>
-              <p>⚙️ Under construction ⚙️</p>
+              <p> I'm interested in computer vision for 3D scene understanding, such as (1) 3D Visual Language Model, (2) 3D Scene Reconstruction and Neural Rendering and (3) 3D Vehicle/Object Perception. Some papers are <span class="highlight">highlighted</span>.</p>
             </td>
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-<tr onmouseout="garfield_stop()" onmouseover="garfield_start()">
+<!-- Works listed here -->      
+<!-- 3dvlm -->
+<tr onmouseout="scenevlm_stop()" onmouseover="scenevlm_start()">
   <td style="padding:20px;width:30%;vertical-align:middle">
     <!-- IMAGES -->
     <div class="one">
-      <div class="two" id='garfield_under' >
-        <img src="images/garfield_under.jpg" width=110%/>
-      </div>
-      <video  width=115% height=100% muted autoplay loop id="garfield_splash">
-        <source src="images/garfield_splash.mp4" type="video/mp4">
+      <video  width=115% height=100% muted autoplay loop id="scenevlm_splash">
+        <source src="images/scenevlm.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
     <!-- SCRIPT FOR HOVERING -->
     <script type="text/javascript">
-      function garfield_start() {
-        document.getElementById('garfield_splash').style.opacity = "0";
-        document.getElementById('garfield_under').style.opacity = "1";
+      function scenevlm_start() {
+        document.getElementById('scenevlm_splash').style.opacity = "0";
+        document.getElementById('scenevlm_under').style.opacity = "1";
       }
 
-      function garfield_stop() {
-        document.getElementById('garfield_splash').style.opacity = "1";
-        document.getElementById('garfield_under').style.opacity = "0";
+      function scenevlm_stop() {
+        document.getElementById('scenevlm_splash').style.opacity = "1";
+        document.getElementById('scenevlm_under').style.opacity = "0";
       }
-      garfield_stop()
+      scenevlm_stop()
     </script>
   </td>
   <td style="padding:20px;width:70%;vertical-align:middle">
     <!-- TITLE -->
-    <a href="https://www.garfield.studio/"><papertitle>GARField: Group Anything with Radiance Fields
+    <a href=""><papertitle>3D Visual Language Model (TBU)</a>
     </papertitle></a>
     <br>
     <!-- AUTHORS -->
-    <b>Chung Min Kim*</b>, Mingxuan Wu*, Justin Ker*, Ken Goldberg, Matthew Tancik, Angjoo Kanazawa
+    Junha Lee*, Chunghyun Park*, <b>Jaesung Choe</b>, Jonathan Tremblay, De-An Huang, Yu-Chiang Frank Wang, Jan Kautz, Minsu Cho, and Christopher Choy
     <br>
     *Equal contribution
-    <br>
-    <!-- CONFERENCE -->
-    <em>arXiv</em> 2023 
-    <!-- LINKS -->
-    <br>
-    <a href="https://arxiv.org/abs/2401.09419">arXiv</a> / <a href="https://www.garfield.studio/">Website</a>
+    <br> 
     <p></p>
     <!-- SUMMARY -->
-    Hierarchical grouping in 3D by training a scale-conditioned affinity field from multi-level masks
+    TBU
+  </td>
+</tr>
+	  
+<!-- Works listed here -->      
+<!-- 3dgs -->
+<tr onmouseout="expert_stop()" onmouseover="expert_start()">
+  <td style="padding:20px;width:30%;vertical-align:middle">
+    <!-- IMAGES -->
+    <div class="one">
+      <video  width=115% height=100% muted autoplay loop id="expert_splash">
+        <source src="images/expert.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- SCRIPT FOR HOVERING -->
+    <script type="text/javascript">
+      function expert_start() {
+        document.getElementById('expert_splash').style.opacity = "0";
+        document.getElementById('expert_under').style.opacity = "1";
+      }
+
+      function expert_stop() {
+        document.getElementById('expert_splash').style.opacity = "1";
+        document.getElementById('expert_under').style.opacity = "0";
+      }
+      expert_stop()
+    </script>
+  </td>
+  <td style="padding:20px;width:70%;vertical-align:middle">
+    <!-- TITLE -->
+    <a href=""><papertitle>3D Gaussian Splatting (TBU)</a>
+    </papertitle></a>
+    <br>
+    <!-- AUTHORS -->
+    Cheng Sun, <b>Jaesung Choe</b>, Yu-Chiang Frank Wang
+    <br>
+    <p></p>
+    <!-- SUMMARY -->
+    TBU
+  </td>
+</tr>
+	  
+<!-- Works listed here -->      
+<!-- 4DRegSDF -->
+<tr onmouseout="regsdf_stop()" onmouseover="regsdf_start()">
+  <td style="padding:20px;width:30%;vertical-align:middle">
+    <!-- IMAGES -->
+    <div class="one">
+      <video  width=115% height=100% muted autoplay loop id="regsdf_splash">
+        <source src="images/regsdf.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- SCRIPT FOR HOVERING -->
+    <script type="text/javascript">
+      function regsdf_start() {
+        document.getElementById('regsdf_splash').style.opacity = "0";
+        document.getElementById('regsdf_under').style.opacity = "1";
+      }
+
+      function regsdf_stop() {
+        document.getElementById('regsdf_splash').style.opacity = "1";
+        document.getElementById('regsdf_under').style.opacity = "0";
+      }
+      regsdf_stop()
+    </script>
+  </td>
+  <td style="padding:20px;width:70%;vertical-align:middle">
+    <!-- TITLE -->
+    <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Choe_Spacetime_Surface_Regularization_for_Neural_Dynamic_Scene_Reconstruction_ICCV_2023_paper.pdf"><papertitle>Spacetime Surface Regularization for Neural Dynamic Scene Reconstruction</a>
+    </papertitle></a>
+    <br>
+    <!-- AUTHORS -->
+    <b>Jaesung Choe</b>, Christopher Choy, Jaesik Park, In So Kweon, Anima Anandkumar
+    <br>
+    <!-- CONFERENCE -->
+    <em>ICCV</em> 2023 
+    <!-- LINKS -->
+    <br>
+    <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Choe_Spacetime_Surface_Regularization_for_Neural_Dynamic_Scene_Reconstruction_ICCV_2023_paper.pdf">Paper</a>
+    <p></p>
+    <!-- SUMMARY -->
+    Propose spacetime surface regularization for 4D surface reconstruction.
   </td>
 </tr>
 				
 <!-- Works listed here -->      
-<!-- Lerf-togo -->
-<tr onmouseout="lerftogo_stop()" onmouseover="lerftogo_start()">
+<!-- PointMIxer -->
+<tr onmouseout="pointmixer_stop()" onmouseover="pointmixer_start()">
   <td style="padding:20px;width:25%;vertical-align:middle">
     <!-- IMAGES -->
     <div class="one">
-      <div class="two" id='lerftogo_under'>
-        <img src="images/lerftogo_under.jpg" width=100%/>
+      <div class="two" id='pointmixer_under'>
+        <img src="images/pointmixer_under.jpeg" width=100%/>
       </div>
-      <video  width=115% height=100% muted autoplay loop id="lerftogo_splash">
-        <source src="images/lerftogo_splash.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <!-- SCRIPT FOR HOVERING -->
-    <script type="text/javascript">
-      function lerftogo_start() {
-        document.getElementById('lerftogo_splash').style.opacity = "0";
-        document.getElementById('lerftogo_under').style.opacity = "1";
-      }
-
-      function lerftogo_stop() {
-        document.getElementById('lerftogo_splash').style.opacity = "1";
-        document.getElementById('lerftogo_under').style.opacity = "0";
-      }
-      lerftogo_stop()
-    </script>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle">
-    <!-- TITLE -->
-    <a href="https://lerftogo.github.io"><papertitle>LERF-TOGO: Language Embedded Radiance Fields for Zero-Shot Task-Oriented Grasping
-    </papertitle></a>
-    <br>
-    <!-- AUTHORS -->
-    Adam Rashid*, Satvik Sharma*, <b>Chung Min Kim</b>, Justin Kerr, Lawrence Yunliang Chen, Angjoo Kanazawa, Ken Goldberg
-    <br>
-    *Equal contribution
-    <br>
-    <!-- CONFERENCE -->
-    <em>CoRL</em> 2023 <b>Oral, Best Paper Finalist</b>
-    <!-- LINKS -->
-    <br>
-    <a href="https://arxiv.org/abs/2309.07970">arXiv</a> / <a href="https://lerftogo.github.io/">Website</a>
-    <p></p>
-    <!-- SUMMARY -->
-    LERF's multi-scale semantics enables 0-shot language-conditioned part grasping for a wide variety of objects.
-  </td>
-</tr>
-<!-- LERF -->
-<tr onmouseout="lerf_stop()" onmouseover="lerf_start()">
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <!-- IMAGES -->
-    <div class="one">
-      <div class="two" id="lerf_under" style="opacity: 0;">
-        <img src="images/lerf_under.svg" width="180">
-      </div>
-      <video width="115%" height="100%" muted="" autoplay="" loop="" id="lerf_splash" style="opacity: 1;">
-        <source src="images/lerf_splash.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <!-- SCRIPT FOR HOVERING -->
-    <script type="text/javascript">
-      function lerf_start() {
-        document.getElementById('lerf_splash').style.opacity = "0";
-        document.getElementById('lerf_under').style.opacity = "1";
-      }
-
-      function lerf_stop() {
-        document.getElementById('lerf_splash').style.opacity = "1";
-        document.getElementById('lerf_under').style.opacity = "0";
-      }
-      lerf_stop()
-    </script>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle">
-    <!-- TITLE -->
-    <a href="https://lerf.io"><papertitle>LERF: Language Embedded Radiance Fields</papertitle></a>
-    <br>
-    <!-- AUTHORS -->
-    Justin Kerr*, <b>Chung Min Kim*</b>, Ken Goldberg, Angjoo Kanazawa, Matthew Tancik
-    <br>
-    *Equal contribution
-    <!-- <br> -->
-    <!-- CONFERENCE -->
-    <em>ICCV</em> 2023 <b>Oral</b>
-    <!-- LINKS -->
-    <br>
-    <a href="https://arxiv.org/abs/2303.09553">arXiv</a> / <a href="https://lerf.io">Website</a>
-    <p></p>
-    <!-- SUMMARY -->
-    Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D
-  </td>
-</tr>
-
-<!-- staxray -->
-<tr onmouseout="staxray_stop()" onmouseover="staxray_start()">
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <!-- IMAGES -->
-    <div class="one">
-      <div class="two" id="staxray_destack" style="opacity: 0;">
-        <img src="images/staxray_destack.png" width="180">
-      </div>
-      <img src="images/staxray_restack.png" width="180" id="staxray_restack" style="opacity: 1;">
-    </div>
-    <!-- SCRIPT FOR HOVERING -->
-    <script type="text/javascript">
-      function staxray_start() {
-        document.getElementById('staxray_restack').style.opacity = "0";
-        document.getElementById('staxray_destack').style.opacity = "1";
-      }
-
-      function staxray_stop() {
-        document.getElementById('staxray_restack').style.opacity = "1";
-        document.getElementById('staxray_destack').style.opacity = "0";
-      }
-      staxray_stop()
-    </script>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle">
-    <!-- TITLE -->  
-      <a href="https://sites.google.com/berkeley.edu/stax-ray">
-      <papertitle>Mechanical Search on Shelves with Efficient
-        Stacking and Destacking of Objects</papertitle>
-      </a>
-    <br>
-    <!-- AUTHORS -->
-    Letian Fu*, Huang Huang*, Michael Danielczuk, <b>Chung Min Kim</b>,
-      Zachary Tam, Jeffrey Ichnowski, Anelia Angelova, Brian Ichter, and
-      Ken Goldberg, <small>*Equal contribution</small>
-    <br>
-    <!-- CONFERENCE -->
-    <em>ISRR</em> 2022 - <a href="https://arxiv.org/pdf/2207.02347.pdf">arXiv</a> / <a href="https://sites.google.com/berkeley.edu/stax-ray">Website</a>
-    <p></p>
-    <!-- SUMMARY -->
-    TODO
-  </td>
-</tr>
-
-<!-- slaxray -->
-<tr onmouseout="slaxray_stop()" onmouseover="slaxray_start()">
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <div class="two" id="slaxray_2" style="opacity: 0;">
-        <img src="images/slaxray_splash_1.jpg" width="180">
-      </div>
-      <img src="images/slaxray_splash_2.jpg" width="180" id="slaxray_1" style="opacity: 1;">
-    </div>
-    <!-- SCRIPT FOR HOVERING -->
-    <script type="text/javascript">
-      function slaxray_start() {
-        document.getElementById('slaxray_1').style.opacity = "0";
-        document.getElementById('slaxray_2').style.opacity = "1";
-      }
-
-      function slaxray_stop() {
-        document.getElementById('slaxray_1').style.opacity = "1";
-        document.getElementById('slaxray_2').style.opacity = "0";
-      }
-      slaxray_stop()
-    </script>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle">
-    <!-- TITLE -->
-    <papertitle>Mechanical Search on Shelves using a Novel “Bluction” Tool</papertitle>
-    <br>
-    <!-- AUTHORS -->
-    Huang Huang, Michael Danielczuk, <b>Chung Min Kim</b>, Letian Fu, Zachary Tam, Jeffrey Ichnowski, Anelia Angelova, Brain Ichter, Ken Goldberg,
-    <br>
-    <!-- CONFERENCE -->
-    <em>ICRA</em> 2022 - <a href="https://ieeexplore.ieee.org/document/9811622">IEEE</a> / <a href="https://arxiv.org/abs/2201.08968">arXiv</a>
-    <p></p>
-    <!-- SUMMARY -->
-    TODO
-  </td>
-</tr>
-
-<!-- ipc-graspsim -->
-<tr onmouseout="igrasp_stop()" onmouseover="igrasp_start()">
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <div height="100%" class="two" id="igrasp_2" style="opacity: 0;">
-        <img src="images/ipc-splash.jpg" height="100%">
-      </div>
-      <img src="images/ipc-splash.jpg" height="100%">
-      <!-- <video width="100%" height="100%" muted="" autoplay="" loop="" id="igrasp_1" style="opacity: 1;">
-        <source src="images/ipc.mp4" type="video/mp4">
+      <img src="images/pointmixer_under.jpeg" width=100%/>
+      <!-- <video  width=115% height=100% muted autoplay loop id="pointmixer_splash">
+        <source src="images/pointmixer_splash.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video> -->
     </div>
     <!-- SCRIPT FOR HOVERING -->
     <script type="text/javascript">
-      function igrasp_start() {
-        document.getElementById('igrasp_1').style.opacity = "0";
-        document.getElementById('igrasp_2').style.opacity = "1";
+      function pointmixer_start() {
+        document.getElementById('pointmixer_splash').style.opacity = "0";
+        document.getElementById('pointmixer_under').style.opacity = "1";
       }
 
-      function igrasp_stop() {
-        document.getElementById('igrasp_1').style.opacity = "1";
-        document.getElementById('igrasp_2').style.opacity = "0";
+      function pointmixer_stop() {
+        document.getElementById('pointmixer_splash').style.opacity = "1";
+        document.getElementById('pointmixer_under').style.opacity = "0";
       }
-      igrasp_stop()
+      pointmixer_stop()
     </script>
   </td>
   <td style="padding:20px;width:75%;vertical-align:middle">
     <!-- TITLE -->
-    <a href="https://sites.google.com/berkeley.edu/ipcgraspsim">
-    <papertitle>IPC-GraspSim: Reducing the Sim2Real Gap for Parallel-Jaw Grasping with the Incremental Potential Contact Model</papertitle>
-    </a>
+    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870611.pdf"><papertitle>PointMixer: MLP-Mixer for Point Cloud Understanding
+    </papertitle></a>
     <br>
     <!-- AUTHORS -->
-    <b>Chung Min Kim</b>, Michael Danielczuk, Isabella Huang, Ken Goldberg
+    <b>Jaesung Choe*</b>, Chunghyun Park*, Francois Rameau, Jaesik Park, In So Kweon
+    <br>
+    *Equal contribution
     <br>
     <!-- CONFERENCE -->
-    <em>ICRA</em> 2022 - <a href="https://ieeexplore.ieee.org/document/9811777">IEEE</a> / <a href="https://arxiv.org/abs/2111.01391">arXiv</a> / <a href="https://drive.google.com/file/d/1nbozaR5KtObhh3p9PkNShejZ-FwJp_dl/view">Video</a> / <a href="https://github.com/BerkeleyAutomation/ipc-graspsim">Code</a> / <a href="https://sites.google.com/berkeley.edu/ipcgraspsim">Website</a>
+    <em>ECCV</em> 2022
+    <!-- LINKS -->
+    <br>
+    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870611.pdf">Paper</a> / <a href="https://github.com/LifeBeyondExpectations/ECCV22-PointMixer">Code</a> / <a href="https://www.dropbox.com/s/im5r5jc2kdej2hb/ECCV22_Poster.pdf?dl=0">Poster</a> / <a href="https://www.youtube.com/watch?v=96jY3DEjxxo&feature=youtu.be&themeRefresh=1">Video</a>
     <p></p>
     <!-- SUMMARY -->
-    IPC-GraspSim is a novel grasp simulator that extends <a href="https://ipc-sim.github.io/">Incremental Potential Contact (IPC)</a> to model both the dynamics and the deformation of compliant jaw tips during robot grasping. 
+    Design a new MLP-only architecture for 3D points.
   </td>
 </tr>
+
+<!-- Works listed here -->      
+<!-- dualpixel -->
+<tr onmouseout="dualpixel_stop()" onmouseover="dualpixel_start()">
+  <td style="padding:20px;width:30%;vertical-align:middle">
+    <!-- IMAGES -->
+    <div class="one">
+      <div class="two" id='dualpixel_under'>
+        <img src="images/dualpixel_under.png" width=100%/>
+      </div>
+      <img src="images/dualpixel_under.png" width=100%/>
+      <!-- <video  width=115% height=100% muted autoplay loop id="dualpixel_splash">
+        <source src="images/dualpixel.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video> -->
+    </div>
+    <!-- SCRIPT FOR HOVERING -->
+    <script type="text/javascript">
+      function dualpixel_start() {
+        document.getElementById('dualpixel_splash').style.opacity = "0";
+        document.getElementById('dualpixel_under').style.opacity = "1";
+      }
+
+      function dualpixel_stop() {
+        document.getElementById('dualpixel_splash').style.opacity = "1";
+        document.getElementById('dualpixel_under').style.opacity = "0";
+      }
+      dualpixel_stop()
+    </script>
+  </td>
+  <td style="padding:20px;width:70%;vertical-align:middle">
+    <!-- TITLE -->
+    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136680176.pdf"><papertitle>Facial Depth and Normal Estimation using Single Dual-Pixel Camera</a>
+    </papertitle></a>
+    <br>
+    <!-- AUTHORS -->
+    Minjun Kang, <b>Jaesung Choe</b>, Hyowon Ha, Hae-Gon Jeon, Sunghoon Im, In So Kweon, Kuk-Jin Yoon
+    <br>
+    <!-- CONFERENCE -->
+    <em>ECCV</em> 2022 
+    <!-- LINKS -->
+    <br>
+    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136680176.pdf">Paper</a> / <a href="https://github.com/MinJunKang/DualPixelFace">Code</a>
+    <p></p>
+    <!-- SUMMARY -->
+    Face Reconstruction from Monocular Dual-Pixel Camera.
+  </td>
+</tr>
+
+<!-- Works listed here -->    
+<!-- depthfusion -->
+<tr onmouseout="depthfusion_stop()" onmouseover="depthfusion_start()">
+  <td style="padding:20px;width:25%;vertical-align:middle">
+    <!-- IMAGES -->
+    <div class="one">
+      <div class="two" id="depthfusion_under" style="opacity: 0;">
+        <img src="images/depthfusion_under.png" width="180">
+      </div>
+      <img src="images/depthfusion_under.png" width="180">
+      <!-- <<video width="115%" height="100%" muted="" autoplay="" loop="" id="depthfusion_splash" style="opacity: 1;">
+        <source src="images/depthfusion_splash.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video> -->
+    </div>
+    <!-- SCRIPT FOR HOVERING -->
+    <script type="text/javascript">
+      function depthfusion_start() {
+        document.getElementById('depthfusion_splash').style.opacity = "0";
+        document.getElementById('depthfusion_under').style.opacity = "1";
+      }
+      function depthfusion_stop() {
+        document.getElementById('depthfusion_splash').style.opacity = "1";
+        document.getElementById('depthfusion_under').style.opacity = "0";
+      }
+      depthfusion_stop()
+    </script>
+  </td>
+  <td style="padding:20px;width:75%;vertical-align:middle">
+    <!-- TITLE -->
+    <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Choe_VolumeFusion_Deep_Depth_Fusion_for_3D_Scene_Reconstruction_ICCV_2021_paper.html"><papertitle>VolumeFusion: Deep Depth Fusion for 3D Scene Reconstruction</papertitle></a>
+    <br>
+    <!-- AUTHORS -->
+    <b>Jaesung Choe</b>, Sunghoon Im, Francois Rameau, Minjun Kang, In So Kweon
+    <br>
+    <!-- CONFERENCE -->
+    <em>ICCV</em> 2021
+    <!-- LINKS -->
+    <br>
+    <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Choe_VolumeFusion_Deep_Depth_Fusion_for_3D_Scene_Reconstruction_ICCV_2021_paper.html">Paper</a> / <a href="https://youtu.be/NMB9_dch4BI">Video</a> / <a href="https://www.dropbox.com/s/x61mzk8go18rcmm/Video_VolumeFusion.pdf?dl=0">Slide</a>
+    <p></p>
+    <!-- SUMMARY -->
+    Deep learning based Depth Fusion algorithm for Indoor Scene Reconstruction.
+  </td>
+</tr>
+
 		  
         </tbody></table>
 				
