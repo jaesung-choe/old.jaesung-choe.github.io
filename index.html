@@ -143,6 +143,54 @@
   </td>
 </tr>
 
+<!-- Works listed here -->      
+<!-- dualpixel -->
+<tr onmouseout="dualpixel_stop()" onmouseover="dualpixel_start()">
+  <td style="padding:20px;width:30%;vertical-align:middle">
+    <!-- IMAGES -->
+    <div class="one">
+      <div class="two" id='dualpixel_under'>
+        <img src="images/dualpixel_under.jpeg" width=100%/>
+      </div>
+      <video  width=115% height=100% muted autoplay loop id="dualpixel_splash">
+        <source src="images/dualpixel.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- SCRIPT FOR HOVERING -->
+    <script type="text/javascript">
+      function dualpixel_start() {
+        document.getElementById('dualpixel_splash').style.opacity = "0";
+        document.getElementById('dualpixel_under').style.opacity = "1";
+      }
+
+      function dualpixel_stop() {
+        document.getElementById('dualpixel_splash').style.opacity = "1";
+        document.getElementById('dualpixel_under').style.opacity = "0";
+      }
+      dualpixel_stop()
+    </script>
+  </td>
+  <td style="padding:20px;width:70%;vertical-align:middle">
+    <!-- TITLE -->
+    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136680176.pdf"><papertitle>Facial Depth and Normal Estimation using Single Dual-Pixel Camera</a>
+    </papertitle></a>
+    <br>
+    <!-- AUTHORS -->
+    Minjun Kang, <b>Jaesung Choe</b>, Hyowon Ha, Hae-Gon Jeon, Sunghoon Im, In So Kweon, Kuk-Jin Yoon
+    <br>
+    <!-- CONFERENCE -->
+    <em>ECCV</em> 2022 
+    <!-- LINKS -->
+    <br>
+    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136680176.pdf">Paper</a>
+    <p></p>
+    <!-- SUMMARY -->
+    Face Reconstruction from Monocular Dual-Pixel Camera.
+  </td>
+</tr>
+
+<!-- Works listed here -->    
 <!-- depthfusion -->
 <tr onmouseout="depthfusion_stop()" onmouseover="depthfusion_start()">
   <td style="padding:20px;width:25%;vertical-align:middle">
