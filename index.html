@@ -320,6 +320,52 @@
   </td>
 </tr>
 
+<!-- Works listed here -->    
+<!-- stereolidar -->
+<tr onmouseout="stereolidar_stop()" onmouseover="stereolidar_start()">
+  <td style="padding:20px;width:25%;vertical-align:middle">
+    <!-- IMAGES -->
+    <div class="one">
+      <div class="two" id="stereolidar_under" style="opacity: 0;">
+        <img src="images/stereolidar_under.png" width="180">
+      </div>
+      <img src="images/stereolidar_under.png" width="180">
+      <!-- <<video width="115%" height="100%" muted="" autoplay="" loop="" id="stereolidar_splash" style="opacity: 1;">
+        <source src="images/stereolidar_splash.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video> -->
+    </div>
+    <!-- SCRIPT FOR HOVERING -->
+    <script type="text/javascript">
+      function stereolidar_start() {
+        document.getElementById('stereolidar_splash').style.opacity = "0";
+        document.getElementById('stereolidar_under').style.opacity = "1";
+      }
+      function stereolidar_stop() {
+        document.getElementById('stereolidar_splash').style.opacity = "1";
+        document.getElementById('stereolidar_under').style.opacity = "0";
+      }
+      stereolidar_stop()
+    </script>
+  </td>
+  <td style="padding:20px;width:75%;vertical-align:middle">
+    <!-- TITLE -->
+    <a href="https://ieeexplore.ieee.org/document/9385917"><papertitle>Volumetric Propagation Network: Stereo-LiDAR Fusion for Long-Range Depth Estimation</papertitle></a>
+    <br>
+    <!-- AUTHORS -->
+    <b>Jaesung Choe</b>, Kyungdon Joo, Tooba Imtiaz, In So Kweon
+    <br>
+    <!-- CONFERENCE -->
+    <em>RA-L</em> 2021
+    <!-- LINKS -->
+    <br>
+    <a href="https://ieeexplore.ieee.org/document/9385917">Paper (RA-L)</a> / <a href="https://arxiv.org/abs/2103.12964">Paper (ICRA)</a> /  <a href="https://youtu.be/2A5NwNJwb18">Video</a>
+    <p></p>
+    <!-- SUMMARY -->
+    Depth estimation using LiDAR pointcloud and stereo images.
+  </td>
+</tr>
+
 
 
 	<!-- Mentorship -->
