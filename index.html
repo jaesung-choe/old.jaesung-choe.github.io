@@ -227,6 +227,54 @@
 </tr>
 
 <!-- Works listed here -->      
+<!-- PointRecon -->
+<tr onmouseout="pointrecon_stop()" onmouseover="pointrecon_start()">
+  <td style="padding:20px;width:25%;vertical-align:middle">
+    <!-- IMAGES -->
+    <div class="one">
+      <div class="two" id='pointrecon_under'>
+        <img src="images/pointrecon_under.jpeg" width=100%/>
+      </div>
+      <img src="images/pointrecon_under.jpeg" width=100%/>
+      <!-- <video  width=115% height=100% muted autoplay loop id="pointrecon_splash">
+        <source src="images/pointrecon_splash.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video> -->
+    </div>
+    <!-- SCRIPT FOR HOVERING -->
+    <script type="text/javascript">
+      function pointrecon_start() {
+        document.getElementById('pointrecon_splash').style.opacity = "0";
+        document.getElementById('pointrecon_under').style.opacity = "1";
+      }
+
+      function pointrecon_stop() {
+        document.getElementById('pointrecon_splash').style.opacity = "1";
+        document.getElementById('pointrecon_under').style.opacity = "0";
+      }
+      pointrecon_stop()
+    </script>
+  </td>
+  <td style="padding:20px;width:75%;vertical-align:middle">
+    <!-- TITLE -->
+    <a href="https://openreview.net/pdf?id=mKDtUtxIGJ"><papertitle>Deep Point Cloud Reconstruction
+    </papertitle></a>
+    <br>
+    <!-- AUTHORS -->
+    <b>Jaesung Choe</b>, ByeongIn Joung, Francois Rameau, Jaesik Park, In So Kweon
+    <br>
+    <!-- CONFERENCE -->
+    <em>ICLR</em> 2022
+    <!-- LINKS -->
+    <br>
+    <a href="https://openreview.net/pdf?id=mKDtUtxIGJ">Paper</a>
+    <p></p>
+    <!-- SUMMARY -->
+    Perform point cloud upsampling and denoising tasks simultaneously. Demonstrate good generalization performance.
+  </td>
+</tr>
+
+<!-- Works listed here -->      
 <!-- dualpixel -->
 <tr onmouseout="dualpixel_stop()" onmouseover="dualpixel_start()">
   <td style="padding:20px;width:30%;vertical-align:middle">
