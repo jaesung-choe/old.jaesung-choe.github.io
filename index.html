@@ -63,15 +63,26 @@
                 <tbody>
                   <!-- Works listed here -->
                   <!-- VoxRas -->
-                  <tr onmouseout="regsdf_stop()" onmouseover="regsdf_start()">
-                    <td style="padding:20px;width:30%;vertical-align:middle">
+                  <tr onmouseout="voxras_stop()" onmouseover="voxras_start()">
+                    <td style="padding:16px;width:20%;vertical-align:middle">
                       <!-- IMAGES -->
-                       <!-- IMAGES -->
                       <div class="one">
-                        <img src="images/voxras_under.png" width=100% />
+                        <div class="two" id='voxras_image'><video  width=100% muted autoplay loop>
+                        <source src="images/voxras_under.png" type="video/mp4">
+                        </video></div>
+                        <img src='images/voxras_under.png' width=130%>
                       </div>
+                      <script type="text/javascript">
+                        function voxras_start() {
+                          document.getElementById('voxras_image').style.opacity = "1";
+                        }
+                        function voxras_stop() {
+                          document.getElementById('voxras_image').style.opacity = "0";
+                        }
+                        voxras_stop()
+                      </script>
                     </td>
-                    <td style="padding:20px;width:70%;vertical-align:middle">
+                    <td style="padding:8px;width:80%;vertical-align:middle">
                       <!-- TITLE -->
                       <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Choe_Spacetime_Surface_Regularization_for_Neural_Dynamic_Scene_Reconstruction_ICCV_2023_paper.pdf">
                         <papertitle>Sparse Voxels Rasterization: Real-time High-fidelity Radiance Field Rendering
@@ -95,8 +106,8 @@
                     <td style="padding:20px;width:30%;vertical-align:middle">
                       <!-- IMAGES -->
                       <div class="one">
-                        <video width=115% height=100% muted autoplay loop id="regsdf_splash">
-                          <source src="images/regsdf.mp4" type="video/mp4"> Your browser does not support the video tag.
+                        <video width=130% height=100% muted autoplay loop id="regsdf_splash">
+                          <source src="images/regsdf.mp4" type="video/mp4">
                         </video>
                       </div>
                       <!-- SCRIPT FOR HOVERING -->
@@ -105,7 +116,6 @@
                           document.getElementById('regsdf_splash').style.opacity = "0";
                           document.getElementById('regsdf_under').style.opacity = "1";
                         }
-
                         function regsdf_stop() {
                           document.getElementById('regsdf_splash').style.opacity = "1";
                           document.getElementById('regsdf_under').style.opacity = "0";
@@ -134,13 +144,13 @@
                   <!-- Works listed here -->
                   <!-- PointMIxer -->
                   <tr onmouseout="pointmixer_stop()" onmouseover="pointmixer_start()">
-                    <td style="padding:20px;width:25%;vertical-align:middle">
+                    <td style="padding:16px;width:20%;vertical-align:middle">
                       <!-- IMAGES -->
                       <div class="one">
                         <div class="two" id='pointmixer_under'>
-                          <img src="images/pointmixer_under.jpeg" width=100% />
+                          <img src="images/pointmixer_under.jpeg" width=130% />
                         </div>
-                        <img src="images/pointmixer_under.jpeg" width=100% />
+                        <img src="images/pointmixer_under.jpeg" width=130% />
                       </div>
                       <!-- SCRIPT FOR HOVERING -->
                       <script type="text/javascript">
@@ -156,7 +166,7 @@
                         pointmixer_stop()
                       </script>
                     </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
+                    <td style="padding:8px;width:80%;vertical-align:middle">
                       <!-- TITLE -->
                       <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870611.pdf">
                         <papertitle>PointMixer: MLP-Mixer for Point Cloud Understanding </papertitle>
@@ -176,17 +186,13 @@
                   <!-- Works listed here -->
                   <!-- PointRecon -->
                   <tr onmouseout="pointrecon_stop()" onmouseover="pointrecon_start()">
-                    <td style="padding:20px;width:25%;vertical-align:middle">
+                    <td style="padding:16px;width:20%;vertical-align:middle">
                       <!-- IMAGES -->
                       <div class="one">
                         <div class="two" id='pointrecon_under'>
-                          <img src="images/pointrecon_under.png" width=100% />
+                          <img src="images/pointrecon_under.png" width=130% />
                         </div>
-                        <img src="images/pointrecon_under.png" width=100% />
-                        <!-- <video  width=115% height=100% muted autoplay loop id="pointrecon_splash">
-        <source src="images/pointrecon_splash.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video> -->
+                        <img src="images/pointrecon_under.png" width=130% />
                       </div>
                       <!-- SCRIPT FOR HOVERING -->
                       <script type="text/javascript">
@@ -202,7 +208,7 @@
                         pointrecon_stop()
                       </script>
                     </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
+                    <td style="padding:8px;width:80%;vertical-align:middle">
                       <!-- TITLE -->
                       <a href="https://openreview.net/pdf?id=mKDtUtxIGJ">
                         <papertitle>Deep Point Cloud Reconstruction </papertitle>
@@ -220,65 +226,15 @@
                     </td>
                   </tr>
                   <!-- Works listed here -->
-                  <!-- dualpixel -->
-                  <tr onmouseout="dualpixel_stop()" onmouseover="dualpixel_start()">
-                    <td style="padding:20px;width:30%;vertical-align:middle">
-                      <!-- IMAGES -->
-                      <div class="one">
-                        <div class="two" id='dualpixel_under'>
-                          <img src="images/dualpixel_under.png" width=100% />
-                        </div>
-                        <img src="images/dualpixel_under.png" width=100% />
-                        <!-- <video  width=115% height=100% muted autoplay loop id="dualpixel_splash">
-        <source src="images/dualpixel.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video> -->
-                      </div>
-                      <!-- SCRIPT FOR HOVERING -->
-                      <script type="text/javascript">
-                        function dualpixel_start() {
-                          document.getElementById('dualpixel_splash').style.opacity = "0";
-                          document.getElementById('dualpixel_under').style.opacity = "1";
-                        }
-
-                        function dualpixel_stop() {
-                          document.getElementById('dualpixel_splash').style.opacity = "1";
-                          document.getElementById('dualpixel_under').style.opacity = "0";
-                        }
-                        dualpixel_stop()
-                      </script>
-                    </td>
-                    <td style="padding:20px;width:70%;vertical-align:middle">
-                      <!-- TITLE -->
-                      <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136680176.pdf">
-                        <papertitle>Facial Depth and Normal Estimation using Single Dual-Pixel Camera
-                      </a>
-                      </papertitle></a>
-                      <br>
-                      <!-- AUTHORS --> Minjun Kang, <b>Jaesung Choe</b>, Hyowon Ha, Hae-Gon Jeon, Sunghoon Im, In So Kweon, Kuk-Jin Yoon <br>
-                      <!-- CONFERENCE -->
-                      <em>ECCV</em> 2022
-                      <!-- LINKS -->
-                      <br>
-                      <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136680176.pdf">Paper</a> / <a href="https://github.com/MinJunKang/DualPixelFace">Code</a>
-                      <p></p>
-                      <!-- SUMMARY --> Face reconstruction method using a monocular Dual-Pixel camera.
-                    </td>
-                  </tr>
-                  <!-- Works listed here -->
                   <!-- depthfusion -->
                   <tr onmouseout="depthfusion_stop()" onmouseover="depthfusion_start()">
-                    <td style="padding:20px;width:25%;vertical-align:middle">
+                    <td style="padding:16px;width:20%;vertical-align:middle">
                       <!-- IMAGES -->
                       <div class="one">
                         <div class="two" id="depthfusion_under" style="opacity: 0;">
-                          <img src="images/depthfusion_under.png" width="180">
+                          <img src="images/depthfusion_under.png" width="120%">
                         </div>
-                        <img src="images/depthfusion_under.png" width="180">
-                        <!-- <<video width="115%" height="100%" muted="" autoplay="" loop="" id="depthfusion_splash" style="opacity: 1;">
-        <source src="images/depthfusion_splash.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video> -->
+                        <img src="images/depthfusion_under.png" width="120%">
                       </div>
                       <!-- SCRIPT FOR HOVERING -->
                       <script type="text/javascript">
@@ -294,7 +250,7 @@
                         depthfusion_stop()
                       </script>
                     </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
+                    <td style="padding:8px;width:80%;vertical-align:middle">
                       <!-- TITLE -->
                       <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Choe_VolumeFusion_Deep_Depth_Fusion_for_3D_Scene_Reconstruction_ICCV_2021_paper.html">
                         <papertitle>VolumeFusion: Deep Depth Fusion for 3D Scene Reconstruction</papertitle>
@@ -314,17 +270,13 @@
                   <!-- Works listed here -->
                   <!-- stereolidar -->
                   <tr onmouseout="stereolidar_stop()" onmouseover="stereolidar_start()">
-                    <td style="padding:20px;width:25%;vertical-align:middle">
+                    <td style="padding:16px;width:20%;vertical-align:middle">
                       <!-- IMAGES -->
                       <div class="one">
                         <div class="two" id="stereolidar_under" style="opacity: 0;">
-                          <img src="images/stereolidar_under.png" width="180">
+                          <img src="images/stereolidar_under.png" width="130%">
                         </div>
-                        <img src="images/stereolidar_under.png" width="180">
-                        <!-- <<video width="115%" height="100%" muted="" autoplay="" loop="" id="stereolidar_splash" style="opacity: 1;">
-        <source src="images/stereolidar_splash.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video> -->
+                        <img src="images/stereolidar_under.png" width="130%">
                       </div>
                       <!-- SCRIPT FOR HOVERING -->
                       <script type="text/javascript">
@@ -340,7 +292,7 @@
                         stereolidar_stop()
                       </script>
                     </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
+                    <td style="padding:8px;width:80%;vertical-align:middle">
                       <!-- TITLE -->
                       <a href="https://ieeexplore.ieee.org/document/9385917">
                         <papertitle>Volumetric Propagation Network: Stereo-LiDAR Fusion for Long-Range Depth Estimation</papertitle>
@@ -357,15 +309,50 @@
                       <!-- SUMMARY --> Depth estimation using LiDAR pointcloud and stereo images.
                     </td>
                   </tr>
-                  <!-- Mentorship -->
+                </tbody>
+              </table>
+            </tbody>
+          </table>
+          <!-- Mentorship -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>Mentorship</heading>
+                  <p>
+                    <a href="https://scholar.google.com/citations?user=HQ1PMggAAAAJ&hl=en">Yoonwoo Jeong</a> (research intern - 2024) <br>
+                    <a href="https://chrockey.github.io/">Chunghyun Park</a> (research intern - 2023) <br>
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <!-- Academic collaboration -->
+              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                <tbody>
+                  <tr>
+                    <td style="padding:20px;width:100%;vertical-align:middle">
+                      <heading>Academic collaboration</heading>
+                      <p>
+                        <a href="https://jiyeon-k1m.github.io/">Ji-Yeon Kim</a> (POSTECH - 2024) <br>
+                        <a href="https://kim-junseong.github.io/">Jun-Seong Kim</a> (POSTECH - 2024) <br>
+                        <a href="https://sites.google.com/view/minjun-kang">Minjun Kang</a> (KAIST - 2023) <br>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                <tbody>
+                  <!-- Talks -->
                   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                     <tbody>
                       <tr>
                         <td style="padding:20px;width:100%;vertical-align:middle">
-                          <heading>Mentorship</heading>
-                          <p>
-                            <a href="https://scholar.google.com/citations?user=HQ1PMggAAAAJ&hl=en">Yoonwoo Jeong</a> (research intern - 2024) <br>
-                            <a href="https://chrockey.github.io/">Chunghyun Park</a> (research intern - 2023) <br>
+                          <heading>Talks</heading>
+                          <p> Pusan Univ., Sep 2024 <br> Hangyang Univ., Sep 2024 <br> DGIST, April 2024 <br> Kakao Brain, May 2022 <br>
                           </p>
                         </td>
                       </tr>
@@ -373,52 +360,26 @@
                   </table>
                   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                     <tbody>
-                      <!-- Academic collaboration -->
-                      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                        <tbody>
-                          <tr>
-                            <td style="padding:20px;width:100%;vertical-align:middle">
-                              <heading>Academic collaboration</heading>
-                              <p>
-                                <a href="https://jiyeon-k1m.github.io/">Ji-Yeon Kim</a> (POSTECH - 2024) <br>
-                                <a href="https://kim-junseong.github.io/">Jun-Seong Kim</a> (POSTECH - 2024) <br>
-                                <a href="https://sites.google.com/view/minjun-kang">Minjun Kang</a> (KAIST - 2023) <br>
-                              </p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                        <tbody>
-                          <!-- Talks -->
-                          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                            <tbody>
-                              <tr>
-                                <td style="padding:20px;width:100%;vertical-align:middle">
-                                  <heading>Talks</heading>
-                                  <p> Pusan Univ., Sep 2024 <br> Hangyang Univ., Sep 2024 <br> DGIST, April 2024 <br> Kakao Brain, May 2022 <br>
-                                  </p>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                            <tbody>
-                              <!-- Originated from Jon Barron's homepage -->
-                            </tbody>
-                          </table>
-                          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                            <tbody>
-                              <tr>
-                                <td style="padding:0px">
-                                  <br>
-                                  <p style="text-align:left;font-size:small;"> Source code for this page was taken from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>. </p>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
+                      <!-- Originated from Jon Barron's homepage -->
+                    </tbody>
+                  </table>
+                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                    <tbody>
+                      <tr>
+                        <td style="padding:0px">
+                          <br>
+                          <p style="text-align:left;font-size:small;"> Source code for this page was taken from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>. </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </tbody>
+              </table>
+            </tbody>
+          </table>
         </td>
       </tr>
+    </tbody>
   </table>
 </body>
 
