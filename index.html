@@ -65,6 +65,44 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <!-- Works listed here -->
+              <!-- Mosaic3D -->
+              <tr onmouseout="mosaic_stop()" onmouseover="mosaic_start()" bgcolor="#defaaf">
+                <td style="padding:16px;width:20%;vertical-align:top;">
+                  <!-- IMAGES -->
+                  <div class="one">
+                    <div class="two" id='mosaic_image'><video  width=120% muted autoplay loop>
+                    <source src="images/mosaic_under.png" type="video/mp4">
+                    </video></div>
+                    <img src='images/mosaic_under.png' width=120%>
+                  </div>
+                  <script type="text/javascript">
+                    function mosaic_start() {
+                      document.getElementById('mosaic_image').style.opacity = "1";
+                    }
+                    function mosaic_stop() {
+                      document.getElementById('mosaic_image').style.opacity = "0";
+                    }
+                    mosaic_stop()
+                  </script>
+                </td>
+                <td style="padding:16px;width:80%;vertical-align:top;">
+                  <!-- TITLE -->
+                  <a href="">
+                    <papertitle>Mosaic3D: Foundation Dataset and Model for Open-Vocabulary 3D Segmentation</papertitle>
+                  </a> <br>
+                  <!-- AUTHORS -->
+                  Junha Lee*, Chunghyun Park*, <b>Jaesung Choe</b>, Frank Wang, Jan Kautz, Minsu Cho, Chris Choy<br>
+                  <!-- CONFERENCE -->
+                  <em>arXiv,</em> 2025 <br>
+                  <!-- LINKS -->
+                  [<a href="">Paper</a>] <br>
+                  <!-- SUMMARY -->
+                  <p>
+                    Introduce a 3D point-text paired data generation pipeline by leveraging 2D foundation models.
+                  </p>
+                </td>
+              </tr>
+              <!-- Works listed here -->
               <!-- VoxRas -->
               <tr onmouseout="voxras_stop()" onmouseover="voxras_start()" bgcolor="#defaaf">
                 <td style="padding:16px;width:20%;vertical-align:top;">
