@@ -65,6 +65,44 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <!-- Works listed here -->
+              <!-- Dr.Splat -->
+              <tr onmouseout="dr_splat_stop()" onmouseover="dr_splat_start()" bgcolor="#defaaf">
+                <td style="padding:16px;width:20%;vertical-align:top;">
+                  <!-- IMAGES -->
+                  <div class="one">
+                    <div class="two" id='dr_splat_image'><video  width=120% muted autoplay loop>
+                    <source src="images/dr_splat_under.png" type="video/mp4">
+                    </video></div>
+                    <img src='images/dr_splat_under.png' width=120%>
+                  </div>
+                  <script type="text/javascript">
+                    function dr_splat_start() {
+                      document.getElementById('dr_splat_image').style.opacity = "1";
+                    }
+                    function dr_splat_stop() {
+                      document.getElementById('dr_splat_image').style.opacity = "0";
+                    }
+                    dr_splat_stop()
+                  </script>
+                </td>
+                <td style="padding:16px;width:80%;vertical-align:top;">
+                  <!-- TITLE -->
+                  <a href="">
+                    <papertitle>Dr. Splat: Directly Referring 3D Gaussian Splatting via Direct Language Embedding Registration</papertitle>
+                  </a> <br>
+                  <!-- AUTHORS -->
+                  Kim Jun-Seong, GeonU Kim, Kim Yu-Ji, Yu-Chiang Frank Wang, Jaesung Choe∗ Tae-Hyun Oh∗<br>
+                  <!-- CONFERENCE -->
+                  <em>arXiv,</em> 2025 <br>
+                  <!-- LINKS -->
+                  [<a href="">Project</a>] [<a href="https://arxiv.org/pdf/2502.16652">Paper</a>] <br>
+                  <!-- SUMMARY -->
+                  <p>
+                    Apply the vector quantization algorithm in learning language attributes from 3D Gaussian Splatting.
+                  </p>
+                </td>
+              </tr>
+              <!-- Works listed here -->
               <!-- Mosaic3D -->
               <tr onmouseout="mosaic_stop()" onmouseover="mosaic_start()" bgcolor="#defaaf">
                 <td style="padding:16px;width:20%;vertical-align:top;">
