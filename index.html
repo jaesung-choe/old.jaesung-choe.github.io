@@ -64,6 +64,44 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <!-- Works listed here -->
+              <!-- SVRecon -->
+              <tr onmouseout="svrecon_stop()" onmouseover="svrecon_start()">
+                <td style="padding:16px;width:20%;vertical-align:top;">
+                  <!-- IMAGES -->
+                  <div class="one">
+                    <div class="two" id='svrecon_image'><video  width=120% muted autoplay loop>
+                    <source src="images/svrecon_under.png" type="video/mp4">
+                    </video></div>
+                    <img src='images/svrecon_under.png' width=120%>
+                  </div>
+                  <script type="text/javascript">
+                    function svrecon_start() {
+                      document.getElementById('svrecon_image').style.opacity = "1";
+                    }
+                    function svrecon_stop() {
+                      document.getElementById('svrecon_image').style.opacity = "0";
+                    }
+                    svrecon_stop()
+                  </script>
+                </td>
+                <td style="padding:16px;width:80%;vertical-align:top;">
+                  <!-- TITLE -->
+                  <a href="https://arxiv.org/abs/2511.17364">
+                    <papertitle>SVRecon: Sparse Voxel Rasterization for Surface Reconstruction</papertitle>
+                  </a> <br>
+                  <!-- AUTHORS -->
+                  Seunghun Oh, <b>Jaesung Choe</b>, Dongjae Lee, Daeun Lee, Seunghoon Jeong, Frank Wang, Jaesik Park <br>
+                  <!-- CONFERENCE -->
+                  <em>arXiv,</em> 2025 <br>
+                  <!-- LINKS -->
+                  [<a href="https://arxiv.org/abs/2511.17364">Paper</a>]  <br>
+                  <!-- SUMMARY -->
+                  <p>
+                    Strengthen voxel-wise associations among parent–child and sibling voxel groups, resulting in smoother surface reconstruction.
+                  </p>
+                </td>
+              </tr>
+              <!-- Works listed here -->
               <!-- MV-SAM -->
               <tr onmouseout="mv_sam_stop()" onmouseover="mv_sam_start()" bgcolor="#defaaf">
                 <td style="padding:16px;width:20%;vertical-align:top;">
@@ -162,7 +200,7 @@
                 </td>
                 <td style="padding:16px;width:80%;vertical-align:top;">
                   <!-- TITLE -->
-                  <a href="">
+                  <a href="https://drsplat.github.io/">
                     <papertitle>Dr. Splat: Directly Referring 3D Gaussian Splatting via Direct Language Embedding Registration</papertitle>
                   </a> <br>
                   <!-- AUTHORS -->
@@ -200,7 +238,7 @@
                 </td>
                 <td style="padding:16px;width:80%;vertical-align:top;">
                   <!-- TITLE -->
-                  <a href="">
+                  <a href="https://nvlabs.github.io/Mosaic3D/">
                     <papertitle>Mosaic3D: Foundation Dataset and Model for Open-Vocabulary 3D Segmentation</papertitle>
                   </a> <br>
                   <!-- AUTHORS -->
@@ -238,7 +276,7 @@
                 </td>
                 <td style="padding:16px;width:80%;vertical-align:top;">
                   <!-- TITLE -->
-                  <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Choe_Spacetime_Surface_Regularization_for_Neural_Dynamic_Scene_Reconstruction_ICCV_2023_paper.pdf">
+                  <a href="https://svraster.github.io">
                     <papertitle>Sparse Voxels Rasterization: Real-time High-fidelity Radiance Field Rendering</papertitle>
                   </a> <br>
                   <!-- AUTHORS -->
@@ -476,6 +514,7 @@
                 <td style="padding:20px;width:100%;vertical-align:middle">
                   <heading>Academic collaboration</heading>
                   <p>
+                    <a href="https://alvin0808.github.io/">Seunghun Oh</a> (Seoul National University - 2025) <br>
                     <a href="https://kim-junseong.github.io/">Kim Jun-Seong</a> (POSTECH - 2024,2025) <br>
                     <a href="https://sites.google.com/view/minjun-kang">Minjun Kang</a> (KAIST - 2023) <br>
                   </p>
