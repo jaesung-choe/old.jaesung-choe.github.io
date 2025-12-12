@@ -1,592 +1,507 @@
 <!DOCTYPE HTML>
 <html lang="en">
-
-<style>
-.year-entry {
-    display: flex;
-    gap: 12px;
-}
-.year-entry .year {
-    width: 30px;
-    font-weight: bold;
-}
-</style>
-
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Jaesung Choe</title>
-  <meta name="author" content="Jaesung Choe">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Jaesung Choe</title>
+  
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Container to center content and limit width */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Header / Bio Section */
+    header {
+      display: flex; /* Replaces the <table> layout */
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .bio-text {
+      flex: 1; /* Takes up remaining space */
+      min-width: 300px;
+    }
+
+    .profile-photo {
+      flex: 0 0 250px; /* Fixed width for photo container */
+    }
+
+    .profile-photo img {
+      width: 100%;
+      /* border-radius: 50%; Optional: circular profile pic */
+      border-radius: 4px; /* Rectangular with slightly soft corners */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Links and Buttons */
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Headings */
+    h1 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      /* font-size: 1.5em; */
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+    h3 {
+      /* font-size: 1.0em; Adjusted for better scale */
+      margin-top: 0;    /* <--- THIS IS THE KEY FIX */
+      margin-bottom: 5px;
+      line-height: 1.2; /* Keeps the title compact */
+    }
+
+    /* Research/News Lists */
+    .news-list {
+      list-style: none;
+      padding: 0;
+    }
+    .news-list li {
+      margin-bottom: 10px;
+    }
+
+    /* Year-based List Styling */
+    .year-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .year-list li {
+      display: flex;        /* Aligns Year and Name side-by-side */
+      margin-bottom: 10px;  /* Space between rows */
+    }
+    
+    .year-col {
+      flex: 0 0 60px;       /* Fixed width for the year column */
+      font-weight: bold;
+      color: #666;          /* Slightly grey for contrast */
+    }
+    
+    .text-col {
+      flex: 1;              /* Takes up remaining space */
+    }
+
+    /* Research Papers Layout */
+    .paper {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+      margin-bottom: 0px;        /* no gap between papers */
+      margin-top: 0;             /* Changed from 5px to 0 */
+      align-items: flex-start;
+    }
+
+    /* THE HIGHLIGHT CLASS */
+    .paper.highlight {
+      background-color: #defaaf; /* The Green Color */
+      padding: 20px;             /* Adds breathing room inside the color */
+      border-radius: 8px;        /* Makes the colored box look smoother */
+      margin-bottom: 0px;        /* no gap between papers */
+      margin-top: 0;             /* Changed from 5px to 0 */
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .paper-image {
+      flex: 0 0 200px; /* Fixed width for paper thumbnails */
+    }
+    
+    .paper-image img {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Video Container (Identical to .paper-image) */
+    .paper-video {
+      flex: 0 0 200px; /* Fixed width matching paper-image */
+      margin-top: 0;   /* Ensures top alignment */
+    }
+
+    /* Video Element Styles */
+    .paper-video video {
+      width: 100%;
+      border-radius: 4px; /* Matches your image style */
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: block; /* Removes tiny gap below video */
+      background-color: #000; /* Optional: good for loading state */
+    }
+
+    /* Mobile Tweaks */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column-reverse; /* Photo on top on mobile */
+        text-align: center;
+      }
+      .paper {
+        flex-direction: column;
+      }
+      .paper-image {
+        margin: 0 auto;
+        max-width: 200px;
+      }
+      .paper-video {
+        margin: 0 auto;
+        max-width: 200px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <!-- Introduction -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr style="padding:0px">
-                <td style="padding:2.5%;width:63%;vertical-align:middle">
-                  <p style="text-align:center">
-                    <name>Jaesung Choe</name>
-                  </p>
-                  <p> Hi, I am a research scientist at <a href="https://research.nvidia.com/labs/twn/" style="color: #76B900">NVIDIA Research Taiwan</a>. My main research interest is 3D vision language models from 3D pointclouds, 3D Gaussians, and 3D humans. </p>
-                  <!-- <p> I received my PhD from <a href="https://www.kaist.ac.kr/en/">KAIST</a> under the supervision of <a href="https://rcv.kaist.ac.kr/" style="color: #1a428a">In So Kweon</a>. I finished my research internship at <a href="https://www.nvidia.com/en-us/research/" style="color: #76B900">NVIDIA Research</a> with <a href="https://chrischoy.github.io/">Christopher Choy</a>, <a href="http://tensorlab.cms.caltech.edu/users/anima/">Anima Anandkumar</a>, and at <a href="https://about.meta.com/realitylabs/" style="color: #3d03fc">Meta</a> with <a href="https://shuochsu.github.io/">Shuochen Su</a>. </p> -->
-                  <p style="text-align:center">
-                    <a href="https://drive.google.com/file/d/1rFHwf0bPE34dMwDoAEDkbrDHB0GGXa2K/view?usp=sharing">Résumé</a> &nbsp/&nbsp jchoe _at_ nvidia _dot_ com &nbsp/&nbsp <a href="https://scholar.google.com/citations?user=dQ7NO0IAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp <a href="https://www.linkedin.com/in/jaesung-choe-531611267/">LinkedIn</a>
-                  </p>
-                </td>
-                <td style="padding:2.5%;width:40%;max-width:40%">
-                  <a href="images/jaesungchoe-profile-3.jpeg"><img style="width:80%;max-width:80%" alt="profile photo" src="images/jaesungchoe-profile-3.jpeg" class="hoverZoomLink"></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- News -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>News</heading>
-                  <p> Nov 2025: <a href="https://research.nvidia.com/labs/twn/">NVIDIA Research Taiwan</a> is currently hiring for a full-time research position, <a href="https://nvidia.eightfold.ai/careers/job/893392161111?domain=nvidia.com&hl=en">NVIDIA career</a>.</p>
-                  <p> Feb 2025: Three papers have been accepted to CVPR 2025.</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- Research overview -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>Research</heading>
-                  <p>
-                    I'm interested in computer vision for 3D scene understanding, such as (1) 3D Visual Language Model, (2) 3D Scene Reconstruction and Neural Rendering and (3) 3D Vehicle/Object Perception. Some papers are <span class="highlight">highlighted</span>.
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- Research (publications) -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <!-- Works listed here -->
-              <!-- SVRecon -->
-              <tr onmouseout="svrecon_stop()" onmouseover="svrecon_start()">
-                <td style="padding:16px;width:20%;vertical-align:top;">
-                  <!-- IMAGES -->
-                  <div class="one">
-                    <div class="two" id='svrecon_image'><video  width=120% muted autoplay loop>
-                    <source src="images/svrecon_under.png" type="video/mp4">
-                    </video></div>
-                    <img src='images/svrecon_under.png' width=120%>
-                  </div>
-                  <script type="text/javascript">
-                    function svrecon_start() {
-                      document.getElementById('svrecon_image').style.opacity = "1";
-                    }
-                    function svrecon_stop() {
-                      document.getElementById('svrecon_image').style.opacity = "0";
-                    }
-                    svrecon_stop()
-                  </script>
-                </td>
-                <td style="padding:16px;width:80%;vertical-align:top;">
-                  <!-- TITLE -->
-                  <a href="https://arxiv.org/abs/2511.17364">
-                    <papertitle>SVRecon: Sparse Voxel Rasterization for Surface Reconstruction</papertitle>
-                  </a> <br>
-                  <!-- AUTHORS -->
-                  Seunghun Oh, <b>Jaesung Choe</b>, Dongjae Lee, Daeun Lee, Seunghoon Jeong, Frank Wang, Jaesik Park <br>
-                  <!-- CONFERENCE -->
-                  <em>arXiv,</em> 2025 <br>
-                  <!-- LINKS -->
-                  [<a href="https://arxiv.org/abs/2511.17364">Paper</a>] [<a href="">Code</a>]  [<a href="">Video</a>] <br>
-                  <!-- SUMMARY -->
-                  <p>
-                    Strengthen voxel-wise associations among parent–child and sibling voxel groups, resulting in smoother surface reconstruction.
-                  </p>
-                </td>
-              </tr>
-              <!-- Works listed here -->
-              <!-- MV-SAM -->
-              <tr onmouseout="mv_sam_stop()" onmouseover="mv_sam_start()" bgcolor="#defaaf">
-                <td style="padding:16px;width:20%;vertical-align:top;">
-                  <!-- IMAGES -->
-                  <div class="one">
-                    <div class="two" id='mv_sam_image'><video  width=120% muted autoplay loop>
-                    <source src="images/mv_sam_under.png" type="video/mp4">
-                    </video></div>
-                    <img src='images/mv_sam_under.png' width=120%>
-                  </div>
-                  <script type="text/javascript">
-                    function mv_sam_start() {
-                      document.getElementById('mv_sam_image').style.opacity = "1";
-                    }
-                    function mv_sam_stop() {
-                      document.getElementById('mv_sam_image').style.opacity = "0";
-                    }
-                    mv_sam_stop()
-                  </script>
-                </td>
-                <td style="padding:16px;width:80%;vertical-align:top;">
-                  <!-- TITLE -->
-                  <a href="">
-                    <papertitle>2D/3D Promptable Segmentation</papertitle>
-                  </a> <br>
-                  <!-- AUTHORS -->
-                  Yoonwoo Jeong, Cheng Sun, Frank Wang, Minsu Cho, <b>Jaesung Choe</b> <br>
-                  <!-- CONFERENCE -->
-                  <em>arXiv,</em> 2025 <br>
-                  <!-- LINKS -->
-                  TBU <br>
-                  <!-- SUMMARY -->
-                  <p>
-                    A framework for 2D/3D promptable segmentation that achieves 3D consistency using pointmaps—3D points reconstructed from unposed images by recent visual geometry models, such as VGGT, PI^3, or ViPE.
-                  </p>
-                </td>
-              </tr>
-              <!-- Works listed here -->
-              <!-- Qrender -->
-              <tr onmouseout="qrender_stop()" onmouseover="qrender_start()" bgcolor="#defaaf">
-                <td style="padding:16px;width:20%;vertical-align:top;">
-                  <!-- IMAGES -->
-                  <div class="one">
-                    <div class="two" id='qrender_image'><video  width=120% muted autoplay loop>
-                    <source src="images/qrender_under.png" type="video/mp4">
-                    </video></div>
-                    <img src='images/qrender_under.png' width=120%>
-                  </div>
-                  <script type="text/javascript">
-                    function qrender_start() {
-                      document.getElementById('qrender_image').style.opacity = "1";
-                    }
-                    function qrender_stop() {
-                      document.getElementById('qrender_image').style.opacity = "0";
-                    }
-                    qrender_stop()
-                  </script>
-                </td>
-                <td style="padding:16px;width:80%;vertical-align:top;">
-                  <!-- TITLE -->
-                  <a href="">
-                    <papertitle>Quantile Render: Efficiently Embedding High-dimensional Feature on 3D Gaussian Splatting</papertitle>
-                  </a> <br>
-                  <!-- AUTHORS -->
-                  Yoonwoo Jeong, Cheng Sun, Frank Wang, Minsu Cho, <b>Jaesung Choe</b> <br>
-                  <!-- CONFERENCE -->
-                  <em>arXiv,</em> 2025 <br>
-                  <!-- LINKS -->
-                  TBU <br>
-                  <!-- SUMMARY -->
-                  <p>
-                     An efficient rendering algorithm for 3D Gaussians that involve high-dimensional feature vectors. Our Q-render achieves ∼43.7× speed gains compared to recent studies when rendering 512-D feature maps.
-                  </p>
-                </td>
-              </tr>
-              <!-- Works listed here -->
-              <!-- Dr.Splat -->
-              <tr onmouseout="dr_splat_stop()" onmouseover="dr_splat_start()">
-                <td style="padding:16px;width:20%;vertical-align:top;">
-                  <!-- IMAGES -->
-                  <div class="one">
-                    <div class="two" id='dr_splat_image'><video  width=120% muted autoplay loop>
-                    <source src="images/dr_splat_under.png" type="video/mp4">
-                    </video></div>
-                    <img src='images/dr_splat_under.png' width=120%>
-                  </div>
-                  <script type="text/javascript">
-                    function dr_splat_start() {
-                      document.getElementById('dr_splat_image').style.opacity = "1";
-                    }
-                    function dr_splat_stop() {
-                      document.getElementById('dr_splat_image').style.opacity = "0";
-                    }
-                    dr_splat_stop()
-                  </script>
-                </td>
-                <td style="padding:16px;width:80%;vertical-align:top;">
-                  <!-- TITLE -->
-                  <a href="https://drsplat.github.io/">
-                    <papertitle>Dr. Splat: Directly Referring 3D Gaussian Splatting via Direct Language Embedding Registration</papertitle>
-                  </a> <br>
-                  <!-- AUTHORS -->
-                  Kim Jun-Seong, GeonU Kim, Kim Yu-Ji, Yu-Chiang Frank Wang, <b>Jaesung Choe*</b>, Tae-Hyun Oh*<br>
-                  <!-- CONFERENCE -->
-                  <em>CVPR,</em> 2025 <span style="color:red;">(highlight)</span> <br>
-                  <!-- LINKS -->
-                  [<a href="https://arxiv.org/pdf/2502.16652">Paper</a>] [<a href="https://drsplat.github.io/">Page</a>] [<a href="https://github.com/kaist-ami/Dr-Splat">Code</a>] <br>
-                  <!-- SUMMARY -->
-                  <p>
-                    Distill language knowledge into 3D Gaussian Splatting.
-                  </p>
-                </td>
-              </tr>
-              <!-- Works listed here -->
-              <!-- Mosaic3D -->
-              <tr onmouseout="mosaic_stop()" onmouseover="mosaic_start()">
-                <td style="padding:16px;width:20%;vertical-align:top;">
-                  <!-- IMAGES -->
-                  <div class="one">
-                    <div class="two" id='mosaic_image'><video  width=120% muted autoplay loop>
-                    <source src="images/mosaic_under.jpg" type="video/mp4">
-                    </video></div>
-                    <img src='images/mosaic_under.jpg' width=120%>
-                  </div>
-                  <script type="text/javascript">
-                    function mosaic_start() {
-                      document.getElementById('mosaic_image').style.opacity = "1";
-                    }
-                    function mosaic_stop() {
-                      document.getElementById('mosaic_image').style.opacity = "0";
-                    }
-                    mosaic_stop()
-                  </script>
-                </td>
-                <td style="padding:16px;width:80%;vertical-align:top;">
-                  <!-- TITLE -->
-                  <a href="https://nvlabs.github.io/Mosaic3D/">
-                    <papertitle>Mosaic3D: Foundation Dataset and Model for Open-Vocabulary 3D Segmentation</papertitle>
-                  </a> <br>
-                  <!-- AUTHORS -->
-                  Junha Lee*, Chunghyun Park*, <b>Jaesung Choe</b>, Yu-Chiang Frank Wang, Jan Kautz, Minsu Cho, Christopher Choy<br>
-                  <!-- CONFERENCE -->
-                  <em>CVPR,</em> 2025 <br>
-                  <!-- LINKS -->
-                  [<a href="https://nvlabs.github.io/Mosaic3D/">Project</a>] [<a href="https://arxiv.org/pdf/2502.02548">Paper</a>] [<a href="https://huggingface.co/datasets/junhalee/Mosaic3D">Data</a>] <br>
-                  <!-- SUMMARY -->
-                  <p>
-                    Introduce a data generation pipeline that leverages 2D foundation models to synthesize 3D mask-text paired data.
-                  </p>
-                </td>
-              </tr>
-              <!-- Works listed here -->
-              <!-- VoxRas -->
-              <tr onmouseout="voxras_stop()" onmouseover="voxras_start()">
-                <td style="padding:16px;width:20%;vertical-align:top;">
-                  <!-- IMAGES -->
-                  <div class="one">
-                    <div class="two" id='voxras_image'><video  width=120% muted autoplay loop>
-                    <source src="images/voxras_under.png" type="video/mp4">
-                    </video></div>
-                    <img src='images/voxras_under.png' width=120%>
-                  </div>
-                  <script type="text/javascript">
-                    function voxras_start() {
-                      document.getElementById('voxras_image').style.opacity = "1";
-                    }
-                    function voxras_stop() {
-                      document.getElementById('voxras_image').style.opacity = "0";
-                    }
-                    voxras_stop()
-                  </script>
-                </td>
-                <td style="padding:16px;width:80%;vertical-align:top;">
-                  <!-- TITLE -->
-                  <a href="https://svraster.github.io">
-                    <papertitle>Sparse Voxels Rasterization: Real-time High-fidelity Radiance Field Rendering</papertitle>
-                  </a> <br>
-                  <!-- AUTHORS -->
-                  Cheng Sun, <b>Jaesung Choe</b>, Charles Loop, Wei-Chiu Ma, Yu-Chiang Frank Wang <br>
-                  <!-- CONFERENCE -->
-                  <em>CVPR,</em> 2025 <br>
-                  <!-- LINKS -->
-                  [<a href="https://svraster.github.io/">Project</a>] [<a href="https://arxiv.org/abs/2412.04459">Paper</a>] [<a href="https://github.com/NVlabs/svraster">Code</a>] <br>
-                  <!-- SUMMARY -->
-                  <p>
-                    Extend to use the rasterization technique into the sparse voxel representation for the image rendering task.
-                  </p>
-                </td>
-              </tr>
-              <!-- Works listed here -->
-              <!-- 4DRegSDF -->
-              <tr onmouseout="regsdf_stop()" onmouseover="regsdf_start()">
-                <td style="padding:20px;width:30%;vertical-align:top;">
-                  <!-- IMAGES -->
-                  <div class="one">
-                    <video width=120% height=100% muted autoplay loop>
-                      <source src="images/regsdf.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <!-- SCRIPT FOR HOVERING -->
-                  <script type="text/javascript">
-                    function regsdf_start() {
-                      document.getElementById('regsdf_splash').style.opacity = "0";
-                      document.getElementById('regsdf_under').style.opacity = "1";
-                    }
-                    function regsdf_stop() {
-                      document.getElementById('regsdf_splash').style.opacity = "1";
-                      document.getElementById('regsdf_under').style.opacity = "0";
-                    }
-                    regsdf_stop()
-                  </script>
-                </td>
-                <td style="padding:20px;width:70%;vertical-align:top;">
-                  <!-- TITLE -->
-                  <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Choe_Spacetime_Surface_Regularization_for_Neural_Dynamic_Scene_Reconstruction_ICCV_2023_paper.pdf">
-                    <papertitle>Spacetime Surface Regularization for Neural Dynamic Scene Reconstruction</papertitle>
-                  </a> <br>
-                  <!-- AUTHORS -->
-                  <b>Jaesung Choe</b>, Christopher Choy, Jaesik Park, In So Kweon, Anima Anandkumar <br>
-                  <!-- CONFERENCE -->
-                  <em>ICCV,</em> 2023 <br>
-                  <!-- LINKS -->
-                  [<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Choe_Spacetime_Surface_Regularization_for_Neural_Dynamic_Scene_Reconstruction_ICCV_2023_paper.pdf">Paper</a>] <br>
-                  <p></p>
-                  <!-- SUMMARY --> Apply spacetime surface regularization technique for 4D surface reconstruction and dynamic scene rendering.
-                </td>
-              </tr>
-              <!-- Works listed here -->
-              <!-- PointMIxer -->
-              <tr onmouseout="pointmixer_stop()" onmouseover="pointmixer_start()">
-                <td style="padding:16px;width:20%;vertical-align:top;">
-                  <!-- IMAGES -->
-                  <div class="one">
-                    <div class="two" id='pointmixer_under'>
-                      <img src="images/pointmixer_under.jpeg" width=120% />
-                    </div>
-                    <img src="images/pointmixer_under.jpeg" width=120% />
-                  </div>
-                  <!-- SCRIPT FOR HOVERING -->
-                  <script type="text/javascript">
-                    function pointmixer_start() {
-                      document.getElementById('pointmixer_splash').style.opacity = "0";
-                      document.getElementById('pointmixer_under').style.opacity = "1";
-                    }
 
-                    function pointmixer_stop() {
-                      document.getElementById('pointmixer_splash').style.opacity = "1";
-                      document.getElementById('pointmixer_under').style.opacity = "0";
-                    }
-                    pointmixer_stop()
-                  </script>
-                </td>
-                <td style="padding:16px;width:80%;vertical-align:top;">
-                  <!-- TITLE -->
-                  <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870611.pdf">
-                    <papertitle>PointMixer: MLP-Mixer for Point Cloud Understanding </papertitle>
-                  </a>
-                  <br>
-                  <!-- AUTHORS -->
-                  <b>Jaesung Choe*</b>, Chunghyun Park*, Francois Rameau, Jaesik Park, In So Kweon <br>
-                  <!-- *Equal contribution <br> -->
-                  <!-- CONFERENCE -->
-                  <em>ECCV,</em> 2022 <br>
-                  <!-- LINKS -->
-                  [<a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870611.pdf">Paper</a>] [<a href="https://github.com/LifeBeyondExpectations/ECCV22-PointMixer">Code</a>] [<a href="https://www.dropbox.com/s/im5r5jc2kdej2hb/ECCV22_Poster.pdf?dl=0">Poster</a>] [<a href="https://www.youtube.com/watch?v=96jY3DEjxxo&feature=youtu.be&themeRefresh=1">Video</a>]
-                  <p></p>
-                  <!-- SUMMARY --> Design a new MLP-only architecture for 3D points.
-                  Introduced by <a href="https://x.com/_akhaliq/status/1462966856428441604">AK</a>.
-                </td>
-              </tr>
-              <!-- Works listed here -->
-              <!-- PointRecon -->
-              <tr onmouseout="pointrecon_stop()" onmouseover="pointrecon_start()">
-                <td style="padding:16px;width:20%;vertical-align:top;">
-                  <!-- IMAGES -->
-                  <div class="one">
-                    <div class="two" id='pointrecon_under'>
-                      <img src="images/pointrecon_under.png" width=120% />
-                    </div>
-                    <img src="images/pointrecon_under.png" width=120% />
-                  </div>
-                  <!-- SCRIPT FOR HOVERING -->
-                  <script type="text/javascript">
-                    function pointrecon_start() {
-                      document.getElementById('pointrecon_splash').style.opacity = "0";
-                      document.getElementById('pointrecon_under').style.opacity = "1";
-                    }
+  <div class="container">
+    
+    <header> <!-- Header -->
+      <div class="bio-text">
+        <h1>Jaesung Choe</h1>
+        <p>
+          Hi, I am a research scientist at <a href="https://research.nvidia.com/labs/twn/" style="color: #76B900">NVIDIA Research Taiwan</a>. 
+          My main research interest is 3D vision language models from 3D pointclouds, 
+          3D Gaussians, and 3D humans.
+        </p>
+        <p>
+          <a href="jchoe@nvidia.com">Email</a> &nbsp;/&nbsp;
+          <a href="https://drive.google.com/file/d/1rFHwf0bPE34dMwDoAEDkbrDHB0GGXa2K/view?usp=sharing">CV</a> &nbsp;/&nbsp;
+          <a href="https://scholar.google.com/citations?user=dQ7NO0IAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
+          <a href="https://www.linkedin.com/in/jaesung-choe-531611267/">LinkedIn</a>
+        </p>
+      </div>
+      
+      <div class="profile-photo">
+        <img src="images/jaesungchoe-profile-3.jpeg" alt="Jaesung Choe Profile Picture">
+      </div>
+    </header>
 
-                    function pointrecon_stop() {
-                      document.getElementById('pointrecon_splash').style.opacity = "1";
-                      document.getElementById('pointrecon_under').style.opacity = "0";
-                    }
-                    pointrecon_stop()
-                  </script>
-                </td>
-                <td style="padding:16px;width:80%;vertical-align:top;">
-                  <!-- TITLE -->
-                  <a href="https://openreview.net/pdf?id=mKDtUtxIGJ">
-                    <papertitle>Deep Point Cloud Reconstruction </papertitle>
-                  </a> <br>
-                  <!-- AUTHORS -->
-                  <b>Jaesung Choe*</b>, ByeongIn Joung*, Francois Rameau, Jaesik Park, In So Kweon <br>
-                  <!-- CONFERENCE -->
-                  <em>ICLR,</em> 2022 <br>
-                  <!-- LINKS -->
-                  [<a href="https://openreview.net/pdf?id=mKDtUtxIGJ">Paper</a>] <br>
-                  <p></p>
-                  <!-- SUMMARY --> Perform the point cloud upsampling and denoising tasks simultaneously. Demonstrate good generalization performance.
-                </td>
-              </tr>
-              <!-- Works listed here -->
-              <!-- depthfusion -->
-              <tr onmouseout="depthfusion_stop()" onmouseover="depthfusion_start()">
-                <td style="padding:16px;width:20%;vertical-align:top;">
-                  <!-- IMAGES -->
-                  <div class="one">
-                    <div class="two" id="depthfusion_under" style="opacity: 0;">
-                      <img src="images/depthfusion_under.png" width="120%">
-                    </div>
-                    <img src="images/depthfusion_under.png" width="120%">
-                  </div>
-                  <!-- SCRIPT FOR HOVERING -->
-                  <script type="text/javascript">
-                    function depthfusion_start() {
-                      document.getElementById('depthfusion_splash').style.opacity = "0";
-                      document.getElementById('depthfusion_under').style.opacity = "1";
-                    }
-                    function depthfusion_stop() {
-                      document.getElementById('depthfusion_splash').style.opacity = "1";
-                      document.getElementById('depthfusion_under').style.opacity = "0";
-                    }
-                    depthfusion_stop()
-                  </script>
-                </td>
-                <td style="padding:16px;width:80%;vertical-align:top;">
-                  <!-- TITLE -->
-                  <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Choe_VolumeFusion_Deep_Depth_Fusion_for_3D_Scene_Reconstruction_ICCV_2021_paper.html">
-                    <papertitle>VolumeFusion: Deep Depth Fusion for 3D Scene Reconstruction</papertitle>
-                  </a> <br>
-                  <!-- AUTHORS -->
-                  <b>Jaesung Choe</b>, Sunghoon Im, Francois Rameau, Minjun Kang, In So Kweon <br>
-                  <!-- CONFERENCE -->
-                  <em>ICCV,</em> 2021 <br>
-                  <!-- LINKS -->
-                  [<a href="https://openaccess.thecvf.com/content/ICCV2021/html/Choe_VolumeFusion_Deep_Depth_Fusion_for_3D_Scene_Reconstruction_ICCV_2021_paper.html">Paper</a>] [<a href="https://youtu.be/NMB9_dch4BI">Video</a>] [<a href="https://www.dropbox.com/s/x61mzk8go18rcmm/Video_VolumeFusion.pdf?dl=0">Slide</a>]
-                  <p></p>
-                  <!-- SUMMARY --> Propose deep learning based depth fusion algorithm for indoor scene reconstruction.
-                </td>
-              </tr>
-              <!-- Works listed here -->
-              <!-- stereolidar -->
-              <tr onmouseout="stereolidar_stop()" onmouseover="stereolidar_start()">
-                <td style="padding:16px;width:20%;vertical-align:top;">
-                  <!-- IMAGES -->
-                  <div class="one">
-                    <div class="two" id="stereolidar_under" style="opacity: 0;">
-                      <img src="images/stereolidar_under.jpg" width="120%">
-                    </div>
-                    <img src="images/stereolidar_under.jpg" width="120%">
-                  </div>
-                  <!-- SCRIPT FOR HOVERING -->
-                  <script type="text/javascript">
-                    function stereolidar_start() {
-                      document.getElementById('stereolidar_splash').style.opacity = "0";
-                      document.getElementById('stereolidar_under').style.opacity = "1";
-                    }
-                    function stereolidar_stop() {
-                      document.getElementById('stereolidar_splash').style.opacity = "1";
-                      document.getElementById('stereolidar_under').style.opacity = "0";
-                    }
-                    stereolidar_stop()
-                  </script>
-                </td>
-                <td style="padding:16px;width:80%;vertical-align:top;">
-                  <!-- TITLE -->
-                  <a href="https://ieeexplore.ieee.org/document/9385917">
-                    <papertitle>Volumetric Propagation Network: Stereo-LiDAR Fusion for Long-Range Depth Estimation</papertitle>
-                  </a> <br>
-                  <!-- AUTHORS -->
-                  <b>Jaesung Choe</b>, Kyungdon Joo, Tooba Imtiaz, In So Kweon <br>
-                  <!-- CONFERENCE -->
-                  <em>RA-L,</em> 2021 <br>
-                  <!-- LINKS -->
-                  <br>
-                  [<a href="https://ieeexplore.ieee.org/document/9385917">Paper (RA-L)</a>] [<a href="https://arxiv.org/abs/2103.12964">Paper (ICRA)</a>] [<a href="https://youtu.be/2A5NwNJwb18">Video</a>]
-                  <p></p>
-                  <!-- SUMMARY --> Estimation dense depth maps by fusing LiDAR points and stereo images.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- Mentorship -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>Research Intern Mentorship</heading>
-                  <p>
-                    <div class="year-entry">
-                        <div class="year">2026</div>
-                        <div>TBU</div>
-                    </div>
-                    <div class="year-entry">
-                        <div class="year">2024</div>
-                        <div><a href="https://jeongyw12382.github.io/">Yoonwoo Jeong</a> (POSTECH)</div>
-                    </div>
-                    <div class="year-entry">
-                        <div class="year">2023</div>
-                        <div><a href="https://chrockey.github.io/">Chunghyun Park</a> (POSTECH)</div>
-                    </div>
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- Academic collaboration -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>Academic collaboration</heading>
-                  <p>
-                    <div class="year-entry">
-                        <div class="year">2026</div>
-                        <div>Open (feel free to reach out if interested!)</div>
-                    </div>
-                    <div class="year-entry">
-                        <div class="year">2025</div>
-                        <div> <a href="https://alvin0808.github.io/">Seunghun Oh</a> (Seoul National University)</div>
-                    </div>
-                    <div class="year-entry">
-                        <div class="year">2025</div>
-                        <div><a href="https://ug-kim.github.io/">Yu-ji Kim</a> (POSTECH)</div>
-                    </div>
-                    <div class="year-entry">
-                        <div class="year">2024</div>
-                        <div><a href="https://kim-junseong.github.io/">Kim Jun-Seong</a> (POSTECH)</div>
-                    </div>
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- Talks -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>Talks</heading>
-                  <p>
-                    Pusan Univ., Sep 2024 <br> Hangyang Univ., Sep 2024 <br> DGIST, April 2024 <br> Kakao Brain, May 2022 <br>
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- Source from Jon Barron -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:0px">
-                  <br>
-                  <p style="text-align:left;font-size:small;">
-                    Source code for this page was taken from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>.
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    <section> <!-- News -->
+      <h2>News</h2>
+      <ul class="news-list">
+        <li><strong>Nov 2025:</strong> <a href="https://research.nvidia.com/labs/twn/">NVIDIA Research Taiwan</a> is currently hiring for a full-time research position.</li>
+        <li><strong>Feb 2025:</strong> Three papers have been accepted to CVPR 2025.</li>
+      </ul>
+    </section>
+
+    <section> <!-- Research -->
+      <h2>Research</h2>
+      <p>
+        I'm interested in computer vision for 3D scene understanding. 
+        Representative papers are highlighted.
+      </p>
+
+      <article class="paper">
+        <div class="paper-image">
+          <img src="images/svrecon.png" alt="SVRecon Thumbnail">
+        </div>
+        <div class="paper-content">
+          <h3>
+            <a href="#">SVRecon: Sparse Voxel Rasterization for Surface Reconstruction</a>
+          </h3>
+          <p class="authors">
+            Seunghun Oh, <strong>Jaesung Choe</strong>, Dongjae Lee, Daeun Lee, Seunghoon Jeong, Frank Wang, Jaesik Park.
+          </p>
+          <p class="venue"><em>arXiv, 2025</em></p>
+          <p class="description">
+            We strengthen voxel-wise associations among parent-child and sibling voxel groups, 
+            resulting in smoother surface reconstruction.
+          </p>
+          <p class="links">
+            [<a href="https://arxiv.org/abs/2511.17364">Paper</a>]
+          </p>
+        </div>
+      </article>
+
+      <article class="paper highlight"> <!-- mv_sam -->
+        <div class="paper-image">
+           <img src="images/mv_sam.png" alt="MV-SAM Thumbnail">
+        </div>
+        <div class="paper-content">
+          <h3>
+            <a href="#">MV-SAM: Multi-view Promptable Segmentation using Pointmap Guidance</a>
+          </h3>
+          <p class="authors">
+            Yoonwoo Jeong, Cheng Sun, Yu-Chiang Frank Wang, Minsu Cho, <strong>Jaesung Choe</strong>
+          </p>
+          <p class="venue"><em>arXiv, 2025</em></p>
+          <p class="description">
+            A framework for multi-view promptable segmentation that achieves 3D consistency using pointmaps—3D points reconstructed from unposed images by recent visual geometry models, such as VGGT, PI3, etc.
+          </p>
+        </div>
+      </article>
+
+      <article class="paper highlight"> <!-- qrender -->
+        <div class="paper-image">
+           <img src="images/qrender.png" alt="Quantile Render Thumbnail">
+        </div>
+        <div class="paper-content">
+          <h3>
+            <a href="#">Quantile Render: Efficiently Embedding High-dimensional Feature on 3D Gaussian Splatting</a>
+          </h3>
+          <p class="authors">
+            Yoonwoo Jeong, Cheng Sun, Yu-Chiang Frank Wang, Minsu Cho, <strong>Jaesung Choe</strong>
+          </p>
+          <p class="venue"><em>arXiv, 2025</em></p>
+          <p class="description">
+            An efficient rendering algorithm for 3D Gaussians that involve high-dimensional feature vectors. Our Q-render achieves ∼43.7× speed gains compared to recent studies when rendering 512-D feature maps.
+          </p>
+        </div>
+      </article>
+
+      <article class="paper"> <!-- dr_splat -->
+        <div class="paper-image">
+           <img src="images/dr_splat.png" alt="Dr. Splat Thumbnail">
+        </div>
+        <div class="paper-content">
+          <h3>
+            <a href="#">Dr. Splat: Directly Referring 3D Gaussian Splatting via Direct Language Embedding Registration</a>
+          </h3>
+          <p class="authors">
+            Kim Jun-Seong, GeonU Kim, Kim Yu-Ji, Yu-Chiang Frank Wang, <strong>Jaesung Choe*</strong>, Tae-Hyun Oh*
+          </p>
+          <p class="venue"><em>CVPR, 2025 (highlight Top 3.7%)</em></p>
+          <p class="description">
+            Distill language knowledge into 3D Gaussian Splatting. </br>
+            + Winner of Qualcomm Innovation Fellowship Korea
+          </p>
+          <p class="links">
+            [<a href="https://drsplat.github.io/">Project</a>]
+            [<a href="https://arxiv.org/pdf/2502.16652">Paper</a>]
+            [<a href="https://github.com/kaist-ami/Dr-Splat">Code</a>]
+          </p>
+        </div>
+      </article>
+
+      <article class="paper highlight"> <!-- mosaic3d -->
+        <div class="paper-image">
+           <img src="images/mosaic3d.jpg" alt="Mosaic3D Thumbnail">
+        </div>
+        <div class="paper-content">
+          <h3>
+            <a href="#">Mosaic3D: Foundation Dataset and Model for Open-Vocabulary 3D Segmentation</a>
+          </h3>
+          <p class="authors">
+            Junha Lee*, Chunghyun Park*, <strong>Jaesung Choe</strong>, Yu-Chiang Frank Wang, Jan Kautz, Minsu Cho, Christopher Choy
+          </p>
+          <p class="venue"><em>CVPR, 2025</em></p>
+          <p class="description">
+            Introduce a data generation pipeline that leverages 2D foundation models to synthesize 3D mask-text paired data.
+          </p>
+          <p class="links">
+            [<a href="https://nvlabs.github.io/Mosaic3D/">Project</a>]
+            [<a href="https://arxiv.org/pdf/2502.02548">Paper</a>]
+            [<a href="https://huggingface.co/datasets/junhalee/Mosaic3D">Data</a>]
+          </p>
+        </div>
+      </article>
+      
+      <article class="paper highlight"> <!-- SVRaster -->
+        <div class="paper-image">
+           <img src="images/svraster.png" alt="SVRaster Thumbnail">
+        </div>
+        <div class="paper-content">
+          <h3>
+            <a href="#">Sparse Voxels Rasterization: Real-time High-fidelity Radiance Field Rendering</a>
+          </h3>
+          <p class="authors">
+            Cheng Sun, <strong>Jaesung Choe</strong>, Charles Loop, Wei-Chiu Ma, Yu-Chiang Frank Wang
+          </p>
+          <p class="venue"><em>CVPR, 2025</em></p>
+          <p class="description">
+            Extend the rasterization technique into the sparse voxel representation for the image rendering task.
+          </p>
+          <p class="links">
+            [<a href="https://svraster.github.io/">Project</a>]
+            [<a href="https://arxiv.org/abs/2412.04459">Paper</a>]
+            [<a href="https://github.com/NVlabs/svraster">Data</a>]
+          </p>
+        </div>
+      </article>
+
+      <article class="paper highlight"> <!-- 4DRegSDF -->
+        <div class="paper-video">
+            <video autoplay loop muted playsinline>
+              <source src="images/regsdf.mp4" type="video/mp4">
+              <img src="images/regsdf.png" alt="RegSDF Fallback" style="width:100%; border-radius:4px;">
+            </video>
+          </div>
+        <div class="paper-content">
+          <h3>
+            <a href="#">Spacetime Surface Regularization for Neural Dynamic Scene Reconstruction</a>
+          </h3>
+          <p class="authors">
+            <strong>Jaesung Choe</strong>, Christopher Choy, Jaesik Park, In So Kweon, Anima Anandkumar
+          </p>
+          <p class="venue"><em>ICCV, 2023</em></p>
+          <p class="description">
+            Apply spacetime surface regularization technique for 4D surface reconstruction and dynamic scene rendering.
+          </p>
+          <p class="links">
+            [<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Choe_Spacetime_Surface_Regularization_for_Neural_Dynamic_Scene_Reconstruction_ICCV_2023_paper.pdf">Paper</a>]
+          </p>
+        </div>
+      </article>
+
+      <article class="paper"> <!-- pointmixer -->
+        <div class="paper-image">
+           <img src="images/pointmixer.jpeg" alt="PointMixer Thumbnail">
+        </div>
+        <div class="paper-content">
+          <h3>
+            <a href="#">PointMixer: MLP-Mixer for Point Cloud Understanding</a>
+          </h3>
+          <p class="authors">
+            <strong>Jaesung Choe*</strong>, Chunghyun Park*, Francois Rameau, Jaesik Park, In So Kweon
+          </p>
+          <p class="venue"><em>ECCV, 2022</em></p>
+          <p class="description">
+            Design a new MLP-only architecture for 3D points.
+          </p>
+          <p class="links">
+            [<a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870611.pdf">Paper</a>]
+            [<a href="https://github.com/LifeBeyondExpectations/ECCV22-PointMixer">Code</a>]
+          </p>
+        </div>
+      </article>
+
+      <article class="paper"> <!-- pointrecon -->
+        <div class="paper-image">
+           <img src="images/pointrecon.png" alt="PointRecon Thumbnail">
+        </div>
+        <div class="paper-content">
+          <h3>
+            <a href="#">Deep Point Cloud Reconstruction</a>
+          </h3>
+          <p class="authors">
+            <strong>Jaesung Choe*</strong>, ByeongIn Joung*, Francois Rameau, Jaesik Park, In So Kweon
+          </p>
+          <p class="venue"><em>ICLR, 2022</em></p>
+          <p class="description">
+            Perform the point cloud upsampling and denoising tasks simultaneously. Demonstrate good generalization performance.
+          </p>
+          <p class="links">
+            [<a href="https://openreview.net/pdf?id=mKDtUtxIGJ">Paper</a>]
+          </p>
+        </div>
+      </article>
+
+      <article class="paper"> <!-- volumefusion -->
+        <div class="paper-image">
+           <img src="images/volumefusion.png" alt="VolumeFusion Thumbnail">
+        </div>
+        <div class="paper-content">
+          <h3>
+            <a href="#">VolumeFusion: Deep Depth Fusion for 3D Scene Reconstruction</a>
+          </h3>
+          <p class="authors">
+            <strong>Jaesung Choe</strong>, Sunghoon Im, Francois Rameau, Minjun Kang, In So Kweon
+          </p>
+          <p class="venue"><em>ICCV, 2021</em></p>
+          <p class="description">
+            Propose deep learning based depth fusion algorithm for indoor scene reconstruction.
+          </p>
+          <p class="links">
+            [<a href="https://openaccess.thecvf.com/content/ICCV2021/html/Choe_VolumeFusion_Deep_Depth_Fusion_for_3D_Scene_Reconstruction_ICCV_2021_paper.html">Paper</a>]
+          </p>
+        </div>
+      </article>
+
+      <article class="paper"> <!-- stereolidar -->
+        <div class="paper-image">
+           <img src="images/stereolidar.jpg" alt="Stereolidar Thumbnail">
+        </div>
+        <div class="paper-content">
+          <h3>
+            <a href="#">Volumetric Propagation Network: Stereo-LiDAR Fusion for Long-Range Depth Estimation</a>
+          </h3>
+          <p class="authors">
+            <strong>Jaesung Choe</strong>, Kyungdon Joo, Tooba Imtiaz, In So Kweon
+          </p>
+          <p class="venue"><em>RA-L, 2021</em></p>
+          <p class="description">
+            Estimation dense depth maps by fusing LiDAR points and stereo images.
+          </p>
+          <p class="links">
+            [<a href="https://ieeexplore.ieee.org/document/9385917">Paper (RA-L)</a>]
+            [<a href="https://arxiv.org/abs/2103.12964">Paper (ICRA)</a>]
+            [<a href="https://youtu.be/2A5NwNJwb18">Video</a>]
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <section> <!-- Research Intern Mentorship -->
+        <h2>Research Intern Mentorship</h2>
+        I have mentored the following research interns.
+        <ul class="year-list">
+          <li>
+            <span class="year-col">2026</span>
+            <span class="text-col">TBU</span>
+          </li>
+          <li>
+            <span class="year-col">2024</span>
+            <span class="text-col"><a href="https://jeongyw12382.github.io/">Yoonwoo Jeong</a> (POSTECH)</span>
+          </li>
+          <li>
+            <span class="year-col">2023</span>
+            <span class="text-col"><a href="https://chrockey.github.io/">Chunghyun Park</a> (POSTECH)</span>
+          </li>
+        </ul>
+    </section>
+  
+    <section> <!-- Academic collaboration -->
+    <h2>Academic collaboration</h2>
+    For research collaboration, I have collaborated with the following researchers.
+    <ul class="year-list">
+        <li>
+        <span class="year-col">2026</span>
+        <span class="text-col">Open (feel free to reach out if interested!)</span>
+        </li>
+        <li>
+        <span class="year-col">2025</span>
+        <span class="text-col"><a href="https://alvin0808.github.io/">Seunghun Oh</a> (Seoul National University)</span>
+        </li>
+        <li>
+        <span class="year-col">2025</span>
+        <span class="text-col"><a href="https://ug-kim.github.io/">Kim Yu-ji</a> (POSTECH)</span>
+        </li>
+        <li>
+        <span class="year-col">2024</span>
+        <span class="text-col"><a href="https://kim-junseong.github.io/">Kim Jun-Seong</a> (POSTECH)</span>
+        </li>
+    </ul>
+    </section>
+
+    <!-- <footer>
+      <p style="text-align:right; font-size:small; color:#999;">
+        Template inspired by <a href="https://github.com/jonbarron/jonbarron.github.io">Jon Barron</a>.
+      </p>
+    </footer>-->
+ 
+  </div>
+
 </body>
-
 </html>
